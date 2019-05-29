@@ -39,7 +39,7 @@
           </f7-nav-right>
         </f7-navbar>
         <f7-block>
-          <p>Popup content goes here.</p>
+          <p>Hello!</p>
         </f7-block>
       </f7-page>
     </f7-view>
