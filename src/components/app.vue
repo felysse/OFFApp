@@ -86,7 +86,7 @@
         // Framework7 Parameters
         f7params: {
           id: 'io.framework7.myapp', // App bundle ID
-          name: 'My App', // App name
+          name: 'Oakland First Friday', // App name
           theme: 'auto', // Automatic theme detection
           // App root data
           data: function () {
