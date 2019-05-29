@@ -5,11 +5,9 @@
       <f7-nav-left>
         <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
       </f7-nav-left>
-      <f7-nav-title sliding>My App</f7-nav-title>
-      <f7-nav-right>
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="right"></f7-link>
-      </f7-nav-right>
-      <f7-nav-title-large sliding>My App</f7-nav-title-large>
+      <f7-nav-title sliding>Oakland First Friday</f7-nav-title>
+
+      <f7-nav-title-large sliding>Oakland First Friday</f7-nav-title-large>
     </f7-navbar>
     <!-- Toolbar-->
     <f7-toolbar bottom>
@@ -34,7 +32,7 @@
           <f7-button fill raised popup-open="#my-popup">Popup</f7-button>
         </f7-col>
         <f7-col width="50">
-          <f7-button fill raised login-screen-open="#my-login-screen">Login Screen</f7-button>
+        
         </f7-col>
       </f7-row>
     </f7-block>
