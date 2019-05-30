@@ -2,6 +2,14 @@
 import HomePage from '../pages/home.vue';
 import AboutPage from '../pages/about.vue';
 import FormPage from '../pages/form.vue';
+import SchedulePage from '../pages/schedule.vue'
+import VendorsPage from '../pages/vendors.vue'
+import MapPage from '../pages/map.vue'
+import InfoPage from '../pages/info.vue'
+import ReportPage from '../pages/report.vue'
+import LinksPage from '../pages/links.vue'
+import SponsorsPage from '../pages/sponsors.vue'
+
 
 
 import DynamicRoutePage from '../pages/dynamic-route.vue';
@@ -21,6 +29,39 @@ var routes = [
     path: '/form/',
     component: FormPage,
   },
+  {
+    path: '/schedule/',
+    component: SchedulePage,
+    keepAlive: true,
+  },
+  {
+    path: '/vendors/',
+    component: VendorsPage,
+  },
+  {
+    path: '/map/',
+    component: MapPage,
+    keepAlive: true,
+  },
+  {
+    path: '/info/',
+    component: InfoPage,
+
+  },
+  {
+    path: '/report/',
+    component: ReportPage,
+  },
+  {
+    path: '/links/',
+    component: LinksPage,
+  },
+  {
+    path: '/sponsors/',
+    component: SponsorsPage,
+  },
+
+
 
 
   {

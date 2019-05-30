@@ -8,6 +8,7 @@
       <f7-nav-title sliding>Oakland First Friday</f7-nav-title>
 
       <f7-nav-title-large sliding>Oakland First Friday</f7-nav-title-large>
+
     </f7-navbar>
     <!-- Toolbar-->
     <f7-toolbar bottom>
@@ -32,7 +33,7 @@
           <f7-button fill raised popup-open="#my-popup">Popup</f7-button>
         </f7-col>
         <f7-col width="50">
-        
+
         </f7-col>
       </f7-row>
     </f7-block>
@@ -43,9 +44,7 @@
         <f7-col width="50">
           <f7-button fill raised panel-open="left">Left Panel</f7-button>
         </f7-col>
-        <f7-col width="50">
-          <f7-button fill raised panel-open="right">Right Panel</f7-button>
-        </f7-col>
+
       </f7-row>
     </f7-block>
 
