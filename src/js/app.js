@@ -26,7 +26,7 @@ import welcomescreen from 'f7-welcomescreen';
 var welcomescreen_slides = [
   {
     id: 'slide0',
-    picture: '<img src="static/offlogo.png" class ="logo">',
+    picture: '<img src="static/offlogo.png" class ="logo">'
   },
   {
     id: 'slide1',
