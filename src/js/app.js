@@ -27,7 +27,6 @@ var welcomescreen_slides = [
   {
     id: 'slide0',
     picture: '<img src="static/offlogo.png" class ="logo">',
-    // text: ''
   },
   {
     id: 'slide1',
