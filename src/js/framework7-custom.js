@@ -52,6 +52,8 @@ import ColorPicker from 'framework7/components/color-picker/color-picker.js';
 import Treeview from 'framework7/components/treeview/treeview.js';
 import Elevation from 'framework7/components/elevation/elevation.js';
 import Typography from 'framework7/components/typography/typography.js';
+import Icons from 'framework7/components/icon/icon.js';
+
 
 Framework7.use([
   Appbar,
