@@ -1,26 +1,41 @@
 <template>
-  <f7-page name="sponsors">
-    <!-- Top Navbar -->
-    <f7-navbar :sliding="false" large>
-      <f7-nav-left>
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
-      </f7-nav-left>
-      <f7-nav-title sliding>Oakland First Friday</f7-nav-title>
+<f7-page name="sponsors">
+  <f7-navbar title="Sponsors" back-link="Back"></f7-navbar>
 
-      <f7-nav-title-large sliding>Oakland First Friday</f7-nav-title-large>
-
-    </f7-navbar>
-    <!-- Toolbar-->
-    <f7-toolbar bottom>
-      <f7-link>Left Link</f7-link>
-      <f7-link>Right Link</f7-link>
-    </f7-toolbar>
-    <!-- Page content-->
-    <f7-block strong>
-      <p>Here is your blank Framework7 app. Let's see what we have here.</p>
+    <f7-block class="text-align-center" title>
+    Many Thanks To Our Sponsors!
     </f7-block>
+      <div class = "item-content">
+        <div class = "image">
+          <f7-link popup-open="#my-popup" href="https://www.letsblum.com/" external>
+            <img src="../../assets-src/blum.png" height = "70" /></a>
+          </f7-link>
+        </div>
+      </div>
 
+      <div class = "item-content">
+        <div class = "image">
+          <f7-link popup-open="#my-popup" href="https://bigfamilymovers.com/" external>
+            <img src="../../assets-src/bfm.png" height = "90" /></a>
+          </f7-link>
+        </div>
+      </div>
 
+      <div class = "item-content">
+        <div class = "image">
+          <f7-link popup-open="#my-popup" href="https://bigpictureanthems.com/" external>
+            <img src="../../assets-src/bpa.png" height = "95" /></a>
+          </f7-link>
+        </div>
+      </div>
+
+      <div class = "item-content">
+        <div class = "image">
+          <f7-link popup-open="#my-popup" href="https://www.kevita.com/" external>
+            <img src="../../assets-src/kevita.png" height = "120" /></a>
+          </f7-link>
+        </div>
+      </div>
 
 
 
