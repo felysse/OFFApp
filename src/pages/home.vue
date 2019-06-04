@@ -20,7 +20,7 @@
       <p>Here is your blank Framework7 app. Let's see what we have here.</p>
     </f7-block>
 
- <button id="rock"class="responsive">Rock</button>
+ <button id="rock"class="responsive">Food</button>
 
     <f7-block-title>Navigation</f7-block-title>
     <f7-list>
