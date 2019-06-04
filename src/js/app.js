@@ -23,7 +23,7 @@ import Framework7Icons from 'framework7-icons/css/framework7-icons.css'
 Framework7.use(Framework7Vue);
 
 //import welcomescreen
-import welcomescreen from 'f7-welcomescreen';
+/*import welcomescreen from 'f7-welcomescreen';
 
 var welcomescreen_slides = [
   {
@@ -52,7 +52,7 @@ var app = new Framework7({
     slides: welcomescreen_slides,
     options: options,
   },
-});
+});*/
 
 // Init App
 new Vue({

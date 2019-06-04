@@ -67,7 +67,7 @@ var routes = [
       var app = router.app;
 
       // Show Preloader
-      //app.preloader.show();
+      app.preloader.show();
 
       // User ID from request
 
@@ -126,7 +126,7 @@ var routes = [
           ]
         };
         // Hide Preloader
-        //app.preloader.hide();
+        app.preloader.hide();
 
         // Resolve route to load page
         resolve(
