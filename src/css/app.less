@@ -56,6 +56,7 @@
   margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
 .button{
   display: flex;
   justify-content: center;
@@ -70,6 +71,10 @@
 
 /* Your app custom styles here */
 .dosdonts{//for slide2 welcomescreen
+=======
+// /* Your app custom styles here */
+#dosdonts{//dimemnsions for dosdonts
+>>>>>>> bd77947948d1da5b913c82fa390f125bb16d4c20
   max-height: 100%;
   max-width: auto;
   position: absolute;
@@ -78,11 +83,21 @@
   transform: translate(-50%, -50%);
 }
 
-.logo{ //for slide1 welcomescreen
-  max-height: 40%;
-  max-width: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#splash-screen { //white background for splashscreen
+position: fixed;
+height: 100%;
+width: 100%;
+top:0;
+left: 0;
+background: #fff;
+z-index: 9999;
+}
+
+#logo{ // dimensions for logo
+    max-height: 35%;
+    max-width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

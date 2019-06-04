@@ -22,6 +22,7 @@ import Framework7Icons from 'framework7-icons/css/framework7-icons.css'
 // Init Framework7-Vue Plugin
 Framework7.use(Framework7Vue);
 
+<<<<<<< HEAD
 //import welcomescreen
 /*import welcomescreen from 'f7-welcomescreen';
 
@@ -53,6 +54,8 @@ var app = new Framework7({
     options: options,
   },
 });*/
+=======
+>>>>>>> bd77947948d1da5b913c82fa390f125bb16d4c20
 
 // Init App
 new Vue({
