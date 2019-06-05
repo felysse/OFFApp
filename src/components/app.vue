@@ -24,9 +24,49 @@
                     :title="item.title"
                     :key="index"
                 ></f7-list-item>
+                <f7-list-item
+                    class= "panel-close"
+                    view=".view-main"
+                    title="Schedule"
+                    link=""
+                    @click="onSchedulePage"
+                ></f7-list-item>
+                <f7-list-item
+                    class= "panel-close"
+                    view=".view-main"
+                    title="Event Map"
+                    link=""
+                    @click="onMapPage"
+                ></f7-list-item>
+
+                <f7-list-item v-for="(item, index) in items2"
+                    class: panel-close
+                    view=".view-main"
+                    :link="item.link"
+                    :title="item.title"
+                    :key="index"
+                ></f7-list-item>
               </f7-list>
 
             </div>
+            <f7-photo-browser
+              ref="pageSchedule"
+              :photos="photosSchedule"
+              lazyLoading="true"
+              type="page"
+              back-link-text="back"
+              navbar-of-text="Schedule"
+            ></f7-photo-browser>
+
+            <f7-photo-browser
+              ref="pageMap"
+              :photos="photosMap"
+              lazyLoading="true"
+              type="page"
+              :toolbar="false"
+              back-link-text="back"
+              navbar-of-text="Event Map"
+            ></f7-photo-browser>
           </f7-page>
         </f7-view>
       </f7-pages>
@@ -77,13 +117,50 @@
           {
             title: 'Vendors',
             link: '/vendors/'
-          }, {
-            title: 'Schedule',
-            link: '/schedule/'
-          }, {
-            title: 'Map',
-            link: '/map/'
-          }, {
+          },
+        ],
+        photosMap: [
+          {
+            url: 'static/pooh.jpg',
+            caption: ''
+          }
+        ],
+        photosSchedule: [
+          {
+              url: 'static/24thStage_1.jpg',
+              caption: '24th ST Stage'
+          },
+          {
+              url: 'static/24thStage_2.jpg',
+              caption: '24th ST Stage'
+          },
+          {
+              url: 'static/24thStage_3.jpg',
+              caption: '24th ST Stage'
+          },
+          {
+              url: 'static/24thStage_4.jpg',
+              caption: '24th ST Stage'
+          },
+          {
+              url: 'static/24thStage_5.jpg',
+              caption: '24th ST Stage'
+          },
+          {
+              url: 'static/25thStage.jpg',
+              caption: '25th ST Stage'
+          },
+          {
+              url: 'static/25thStage_2.jpg',
+              caption: '25th ST Stage'
+          },
+          {
+              url: 'static/27thStage.jpg',
+              caption: '27th ST Stage'
+          },
+        ],
+        items2: [
+          {
             title: 'Info',
             link: '/info/'
           }, {
@@ -139,6 +216,12 @@
     methods: {
       alertLoginData() {
         this.$f7.dialog.alert('Username: ' + this.username + '<br>Password: ' + this.password);
+      },
+      onMapPage: function () {
+        this.$refs.pageMap.open()
+      },
+      onSchedulePage: function () {
+        this.$refs.pageSchedule.open()
       }
     },
     mounted() {
