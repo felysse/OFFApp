@@ -9,11 +9,14 @@
     <f7-view id="left-panel-view">
       <f7-pages>
         <f7-view>
-          <f7-page>
+          <f7-page class = "page-content1">
             <div class = "page-content">
               <div class = "item-content">
-                <div class = "image">
-                  <a href="/"><img src="../../assets-src/oaklandfirstfridays.png" height = "85" /></a>
+                <div class = "image1">
+                  <a href="/"><img src="../../assets-src/oaklandfirstfridays.png"
+                  width="100%"
+                  height="auto"
+                  /></a>
                 </div>
               </div>
               <f7-list>
