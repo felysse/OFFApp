@@ -5,11 +5,11 @@
 
   <!-- Left panel with cover effect-->
 
-  <f7-panel left cover theme-dark>
+  <f7-panel left cover theme-light>
     <f7-view id="left-panel-view">
       <f7-pages>
         <f7-view>
-          <f7-page class = "page-content1">
+          <f7-page>
             <div class = "page-content">
               <div class = "item-content">
                 <div class = "image1">
@@ -19,7 +19,7 @@
                   /></a>
                 </div>
               </div>
-              <f7-list>
+              <f7-list class="theme-light">
                 <f7-list-item v-for="(item, index) in items"
                     class: panel-close
                     view=".view-main"
@@ -57,6 +57,7 @@
               :photos="photosSchedule"
               lazyLoading="true"
               type="page"
+              :toolbar="false"
               back-link-text="back"
               navbar-of-text="Schedule"
             ></f7-photo-browser>
