@@ -21,41 +21,9 @@ import Framework7Icons from 'framework7-icons/css/framework7-icons.css'
 
 // Init Framework7-Vue Plugin
 Framework7.use(Framework7Vue);
-import 'viewerjs/dist/viewer.css';
-import Viewer from 'v-viewer';
-Vue.use(Viewer);
-
-//import welcomescreen
-/*import welcomescreen from 'f7-welcomescreen';
-
-var welcomescreen_slides = [
-  {
-    id: 'slide0',
-    picture: '<img src="static/offlogo.png" class ="logo">'
-  },
-  {
-    id: 'slide1',
-    // title: 'Slide 1', // optional
-    picture: '<img src="static/dos:donts.jpg" class="dosdonts">',
-    // text: 'This is slide 2'
-  }
-];
-  Framework7.use(welcomescreen);
-
-// Define options for welcomescreen plugin
-var options = {
-  'bgcolor': '#	#FFFFFF',
-  'fontcolor': '#fdc35b'
-}
-
-var app = new Framework7({
-  root: '#app', // or what ever your root is
-  name: 'welcomescreen-demo', // choose a name
-  welcomescreen: { // Setup welcomescreen plugin
-    slides: welcomescreen_slides,
-    options: options,
-  },
-});*/
+// import 'viewerjs/dist/viewer.css';
+// import Viewer from 'v-viewer';
+// Vue.use(Viewer);
 
 // Init App
 new Vue({
