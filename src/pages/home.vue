@@ -1,26 +1,27 @@
 <template>
   <f7-page name="home">
     <!-- Top Navbar -->
-    <f7-navbar :sliding="false" large>
-      <f7-nav-left>
+    <div class="block">
         <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
-      </f7-nav-left>
-      <f7-nav-title sliding>Oakland First Fridays</f7-nav-title>
+    </div>
 
-      <f7-nav-title-large sliding>Oakland First Friday</f7-nav-title-large>
+    <div id="element_block">
+        <div id="outer">
+            <img id= 'mainimage' src="static/mainlogo.png"></div>
+        </div>
+    </div>
 
-    </f7-navbar>
     <!-- Toolbar-->
-    <f7-toolbar bottom>
+    <!--<f7-toolbar bottom>
       <f7-link>Left Link</f7-link>
       <f7-link>Right Link</f7-link>
-    </f7-toolbar>
+    </f7-toolbar>-->
     <!-- Page content-->
-    <f7-block strong>
+    <!--<f7-block strong>
       <p>Here is your blank Framework7 app. Let's see what we have here.</p>
-    </f7-block>
+    </f7-block>-->
 
- <button id="rock"class="responsive">Food</button>
+    <button id="rock"class="responsive">Food</button>
 
     <f7-block-title>Navigation</f7-block-title>
     <f7-list>
