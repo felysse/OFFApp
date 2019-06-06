@@ -21,12 +21,14 @@
       <p>Here is your blank Framework7 app. Let's see what we have here.</p>
     </f7-block>-->
 
-    <button id="food"class="responsive">Food</button>
-    <button id="retail"class="responsive">Retail</button>
-    <button id="music"class="responsive">Music</button>
-    <button id="entertainment"class="responsive">Entertainment</button>
+    <button id="food"class="responsive"><span style = "background-color:#000">Food</span></button>
+    <button id="retail"class="responsive"><span style = "background-color:#000">Retail</span></button>
+    <button id="music"class="responsive"><span style = "background-color:#000">Music</span></button>
+    <button id="entertainment"class="responsive"><span style = "background-color:#000">Entertainment</span></button>
+    <button id="others"class="responsive"><span style = "background-color:#000">Others</span></button>
+    <button id="viewall"class="responsive"><span style = "background-color:#000">View All</span></button>
 
-    
+
 
 
 
