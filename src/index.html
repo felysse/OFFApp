@@ -22,11 +22,22 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
   <link rel="icon" href="../assets-src/cordova-ios-icon.png">
+  <style type="text/css">
+  .centerImage
+  {
+    max-height: 40%;
+    max-width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  </style>
 
   <!-- built styles file will be auto injected -->
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
   <% if (process.env.TARGET === 'cordova') { %>
   <script src="cordova.js"></script>
   <% } %>
@@ -37,13 +48,14 @@
           document.getElementById('splash-screen').style.display = 'none';
         }, 1000);
       }); -->
-    <div id="splash-screen"><img id= "logo" src="static/offlogo.png"></div>
-    <script type="text/javascript">
-        window.addEventListener('load', function () {
-          setTimeout(function () {
-            document.getElementById('splash-screen').style.display = 'none';
-          }, 1000);
-        });
-    </script>
-</body>
-</html>
+  		<div id="splash-screen"><img src="static/offlogo.png" class="centerImage"></div>
+  		<script type="text/javascript">
+  			window.addEventListener('load', function () {
+  				setTimeout(function () {
+  					document.getElementById('splash-screen').style.display = 'center';
+  				}, 400);
+  			});
+  		</script>
+      </div>
+    	</body>
+    </html>
