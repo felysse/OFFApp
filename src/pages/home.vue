@@ -21,9 +21,9 @@
       <p>Here is your blank Framework7 app. Let's see what we have here.</p>
     </f7-block>-->
 
-    <button id="food"class="responsive"><span style = "background-color:#000">Food</span></button>
-    <button id="retail"class="responsive"><span style = "background-color:#000">Retail</span></button>
-    <button id="music"class="responsive"><span style = "background-color:#000">Music</span></button>
+    <f7-button id="food" class="link" href="/food/"><span style = "background-color:#000">Food</span></f7-button>
+    <f7-button id="retail"class="responsive"><span style = "background-color:#000">Retail</span></f7-button>
+    <f7-button id="music"class="responsive"><span style = "background-color:#000">Music</span></f7-button>
     <button id="entertainment"class="responsive"><span style = "background-color:#000">Entertainment</span></button>
     <button id="others"class="responsive"><span style = "background-color:#000">Others</span></button>
     <button id="viewall"class="responsive"><span style = "background-color:#000">View All</span></button>

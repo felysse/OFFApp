@@ -1,11 +1,67 @@
 <template>
   <f7-page name="vendors">
-    <f7-navbar title="Vendors" back-link="Back"></f7-navbar>
+    <div class="block">
+        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
+    </div>
     <f7-block-title>Vendors</f7-block-title>
-    <f7-block strong>
-      <p>Insert Vendors Here</p>
-    </f7-block>
+    <f7-list>
+      <f7-list-item v-for="(item, index) in items"
+          class: panel-close
+          view=".view-main"
+          :name="item.name"
+          :media="item.media"
+          :link="item.link"
+          :title="item.title"
+          :key="index"
+      ></f7-list-item>
+    </f7-list>
 
 
   </f7-page>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      // Framework7 Parameters
+      items: [
+        {
+          title: 'Food',
+          link: '/food/',
+          media: 'local_dining',
+          name: 'mat',
+        },
+        {
+          title: 'Retail',
+          link: '/vendors/',
+          media: 'local_mall',
+          name: 'mat'
+        },
+        {
+          title: 'Music',
+          link: '/vendors/',
+          media: 'music_note',
+          name: 'mat'
+        },
+        {
+          title: 'Entertainment',
+          link: '/vendors/',
+          media: 'local_activity',
+          name: 'mat'
+        },
+        {
+          title: 'Others',
+          link: '/vendors/',
+          media: 'more_fill',
+          name: 'icon'
+        },
+        {
+          title: 'View All',
+          link: '/vendors/',
+          media: ''
+        },
+      ]
+    }
+  }
+}
+</script>

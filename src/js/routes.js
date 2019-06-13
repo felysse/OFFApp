@@ -9,6 +9,8 @@ import InfoPage from '../pages/info.vue'
 import ReportPage from '../pages/report.vue'
 import LinksPage from '../pages/links.vue'
 import SponsorsPage from '../pages/sponsors.vue'
+import FoodPage from '../pages/food.vue'
+import SupportPage from '../pages/support.vue'
 
 
 
@@ -58,6 +60,72 @@ var routes = [
     component: SponsorsPage,
   },
   {
+    path: '/food/',
+    component: FoodPage,
+  },
+  {
+    path: '/support/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      // Router instance
+      var router = this;
+
+      // App instance
+      var app = router.app;
+
+      // Show Preloader
+      app.preloader.show();
+
+      // User ID from request
+
+
+      // Simulate Ajax Request
+      setTimeout(function () {
+        // We got user data from request
+        var user = {
+
+
+          more: 'Support Oakland First Fridays',
+          links2: [
+            {
+              title: 'Donate',
+              url: 'https://secure.squarespace.com/checkout/donate?donatePageId=5a8c9d92085229336036f459&ss_cid=e702a449-31b0-403d-a6c6-28ae11b45a66&ss_cvisit=1559254845736&ss_cvr=c0b21430-e79b-4aa6-8cd6-1ffce4f129f4%7C1554711350733%7C1559158626798%7C1559254847454%7C6',
+              media: 'heart_fill'
+            },
+            {
+              title: 'Sponsor',
+              url: 'https://www.oaklandfirstfridays.org/sponsor',
+              media: 'gift_fill'
+            },
+            {
+              title: 'Volunteer',
+              url: 'https://www.oaklandfirstfridays.org/volunteer',
+              media: 'hand'
+            },
+            {
+              title: 'Be A Vendor',
+              url: 'https://www.oaklandfirstfridays.org/participate-1',
+              media: 'persons_round_fill'
+            }
+          ]
+        };
+        // Hide Preloader
+        app.preloader.hide();
+
+        // Resolve route to load page
+        resolve(
+          {
+            component: SupportPage,
+          },
+          {
+            context: {
+              user: user,
+            }
+          }
+        );
+      }, 1000);
+    },
+  },
+  {
     path: '/links/',
     async: function (routeTo, routeFrom, resolve, reject) {
       // Router instance
@@ -101,29 +169,7 @@ var routes = [
             },
           ],
 
-          more: 'Support Oakland First Fridays',
-          links2: [
-            {
-              title: 'Donate',
-              url: 'https://secure.squarespace.com/checkout/donate?donatePageId=5a8c9d92085229336036f459&ss_cid=e702a449-31b0-403d-a6c6-28ae11b45a66&ss_cvisit=1559254845736&ss_cvr=c0b21430-e79b-4aa6-8cd6-1ffce4f129f4%7C1554711350733%7C1559158626798%7C1559254847454%7C6',
-              media: 'heart_fill'
-            },
-            {
-              title: 'Sponsor',
-              url: 'https://www.oaklandfirstfridays.org/sponsor',
-              media: 'gift_fill'
-            },
-            {
-              title: 'Volunteer',
-              url: 'https://www.oaklandfirstfridays.org/volunteer',
-              media: 'hand'
-            },
-            {
-              title: 'Be A Vendor',
-              url: 'https://www.oaklandfirstfridays.org/participate-1',
-              media: 'persons_round_fill'
-            }
-          ]
+
         };
         // Hide Preloader
         app.preloader.hide();

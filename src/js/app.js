@@ -7,6 +7,7 @@ import Framework7 from './framework7-custom.js';
 // Import Framework7-Vue Plugin
 import Framework7Vue from 'framework7-vue/framework7-vue.esm.bundle.js';
 
+
 // Import Framework7 Styles
 import '../css/framework7-custom.less';
 

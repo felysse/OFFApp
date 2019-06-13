@@ -50,9 +50,19 @@
                     :key="index"
                 ></f7-list-item>
               </f7-list>
-
+              <!--More Info-->
+              <!--<f7-block>
+              <div class = "text">
+              <p>
+                <font color="#fdc35b">
+                  Lost & Found @ KONO Lounge (27th St)
+                </font>
+              </p>
+              </div>
+            </f7-block>-->
             </div>
             <f7-photo-browser
+
               ref="pageSchedule"
               :photos="photosSchedule"
               lazyLoading="true"
@@ -71,10 +81,12 @@
               back-link-text="back"
               navbar-of-text="Event Map"
             ></f7-photo-browser>
+
           </f7-page>
         </f7-view>
       </f7-pages>
     </f7-view>
+
   </f7-panel>
 
 
@@ -118,10 +130,7 @@
             title: 'Home',
             link: '/'
           },
-          {
-            title: 'Vendors',
-            link: '/vendors/'
-          },
+
         ],
         photosMap: [
           {
@@ -164,13 +173,13 @@
           },
         ],
         items2: [
-          {
-            title: 'Info',
-            link: '/info/'
-          }, {
+           {
             title: 'Report',
             link: '/report/'
           }, {
+            title: 'Support Us',
+            link: '/support/'
+          },{
             title: 'Links',
             link: '/links/'
           }, {
