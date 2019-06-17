@@ -26,6 +26,7 @@
                     :link="item.link"
                     :title="item.title"
                     :key="index"
+                    @click="showToastBottom"
                 ></f7-list-item>
                 <f7-list-item
                     class= "panel-close"
@@ -33,6 +34,7 @@
                     title="Schedule"
                     link=""
                     @click="onSchedulePage"
+
                 ></f7-list-item>
                 <f7-list-item
                     class= "panel-close"
@@ -40,6 +42,7 @@
                     title="Event Map"
                     link=""
                     @click="onMapPage"
+
                 ></f7-list-item>
 
                 <f7-list-item v-for="(item, index) in items2"
@@ -70,6 +73,7 @@
               :toolbar="false"
               back-link-text="back"
               navbar-of-text="Schedule"
+              @photobrowser:opened ="showToastBottom"
             ></f7-photo-browser>
 
             <f7-photo-browser
@@ -80,6 +84,7 @@
               :toolbar="false"
               back-link-text="back"
               navbar-of-text="Event Map"
+              @photobrowser:opened ="showToastBottom"
             ></f7-photo-browser>
 
           </f7-page>
@@ -235,7 +240,19 @@
       },
       onSchedulePage: function () {
         this.$refs.pageSchedule.open()
-      }
+      },
+      showToastBottom() {
+        const self = this;
+        // Create toast
+        if (!self.toastBottom) {
+          self.toastBottom = self.$f7.toast.create({
+            text: 'Go to <font color="fdc35b">Support Us > Donate </font>to Donate Now!',
+            closeTimeout: 3000,
+          });
+        }
+        // Open it
+        self.toastBottom.open();
+      },
     },
     mounted() {
       this.$f7ready((f7) => {
