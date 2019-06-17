@@ -3,11 +3,18 @@
     <f7-navbar title="Report" back-link="Back"></f7-navbar>
     <f7-block-title>Report</f7-block-title>
     <f7-block>
-    See any accidents or suspicious activities? Click the button below to send a report to our staff immediately
+    See any accidents or suspicious activities? <br>
+    Click the button below to send a report to our staff immediately
     <br>
+    <br>
+    <b>
+      *Do remember to include the location of incident in your Report
+    </b>
+    <br>
+    <br>
+      <f7-button fill href="sms:;" class="external" target="_blank">Send a Report</f7-button>
     <br>
 
-      <f7-button fill href="sms:;" class="external" target="_blank">Send a Report</f7-button>
     </f7-block>
 
 

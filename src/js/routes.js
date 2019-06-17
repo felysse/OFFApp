@@ -105,6 +105,11 @@ var routes = [
               title: 'Be A Vendor',
               url: 'https://www.oaklandfirstfridays.org/participate-1',
               media: 'persons_round_fill'
+            },
+            {
+              title: 'Feedback',
+              url: 'https://www.oaklandfirstfridays.org/connect',
+              media: 'compose'
             }
           ]
         };
