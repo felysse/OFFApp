@@ -106,22 +106,3 @@
     },
   };
 </script>
-
-<style lang="less" scoped>
-.swiper-container{
-  height: 35%;
-}
-.swiper-slide{
-  display: contain;
-  justify-content: center;
-  align-items: center;
-  background:#fff;
-  font-size: 25px;
-}
-
-.swiper-container img {
-width:100%;
-height:100%;
-overflow:hidden;
-}
-</style>
