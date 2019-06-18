@@ -146,35 +146,35 @@
         photosSchedule: [
           {
               url: 'static/24thStage_1.jpg',
-              caption: '24th ST Stage'
+              caption: ''
           },
           {
               url: 'static/24thStage_2.jpg',
-              caption: '24th ST Stage'
+              caption: ''
           },
           {
               url: 'static/24thStage_3.jpg',
-              caption: '24th ST Stage'
+              caption: ''
           },
           {
               url: 'static/24thStage_4.jpg',
-              caption: '24th ST Stage'
+              caption: ''
           },
           {
               url: 'static/24thStage_5.jpg',
-              caption: '24th ST Stage'
+              caption: ''
           },
           {
               url: 'static/25thStage.jpg',
-              caption: '25th ST Stage'
+              caption: ''
           },
           {
               url: 'static/25thStage_2.jpg',
-              caption: '25th ST Stage'
+              caption: ''
           },
           {
               url: 'static/27thStage.jpg',
-              caption: '27th ST Stage'
+              caption: ''
           },
         ],
         items2: [
@@ -197,6 +197,7 @@
           id: 'io.framework7.myapp', // App bundle ID
           name: 'Oakland First Friday', // App name
           theme: 'aurora', // Automatic theme detection
+
           // App root data
           data: function () {
             return {

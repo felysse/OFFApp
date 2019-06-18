@@ -4,7 +4,7 @@
     <f7-block-title>Report</f7-block-title>
     <f7-block>
     See any accidents or suspicious activities? <br>
-    Click the button below to send a report to our staff immediately
+    Click the button below to send a report via sms to our staff immediately
     <br>
     <br>
     <b>
