@@ -60,6 +60,7 @@
     data() {
       return {
         popupOpened: false,
+        items: 3
       };
     },
     methods: {
@@ -104,16 +105,6 @@
       },
     },
   };
-</script>
-
-<script>
-export default {
-  data () {
-    return {
-      items: 3
-    }
-  }
-}
 </script>
 
 <style lang="less" scoped>
