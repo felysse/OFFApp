@@ -31,7 +31,7 @@
                 <f7-list-item
                     class= "panel-close"
                     view=".view-main"
-                    title="Schedule"
+                    title="Performance & Activities"
                     link=""
                     @click="onSchedulePage"
 
@@ -146,35 +146,35 @@
         photosSchedule: [
           {
               url: 'static/24thStage_1.jpg',
-              caption: ''
+
           },
           {
               url: 'static/24thStage_2.jpg',
-              caption: ''
+
           },
           {
               url: 'static/24thStage_3.jpg',
-              caption: ''
+
           },
           {
               url: 'static/24thStage_4.jpg',
-              caption: ''
+
           },
           {
               url: 'static/24thStage_5.jpg',
-              caption: ''
+
           },
           {
               url: 'static/25thStage.jpg',
-              caption: ''
+
           },
           {
               url: 'static/25thStage_2.jpg',
-              caption: ''
+
           },
           {
               url: 'static/27thStage.jpg',
-              caption: ''
+
           },
         ],
         items2: [

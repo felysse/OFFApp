@@ -102,9 +102,14 @@ var routes = [
               media: 'hand'
             },
             {
-              title: 'Be A Vendor',
-              url: 'https://www.oaklandfirstfridays.org/participate-1',
+              title: 'Become A Vendor',
+              url: 'https://pinnaclesfestivals.knack.com/oakff#home/',
               media: 'persons_round_fill'
+            },
+            {
+              title: 'Perform or Set Up an Activity',
+              url: 'https://pinnaclesfestivals.knack.com/oakff#home/',
+              media: 'star_fill'
             },
             {
               title: 'Feedback',
@@ -152,9 +157,15 @@ var routes = [
           about: 'Keep In Touch With Us!',
           links: [
             {
-              title: 'Website',
+              title: 'Event Website',
               url: 'https://www.oaklandfirstfridays.org/',
               media: 'world',
+
+            },
+            {
+              title: 'After the Event',
+              url: 'https://oaklandfirstfridays.org/afterwards',
+              media: 'time_fill',
 
             },
             {
@@ -168,9 +179,19 @@ var routes = [
               media: 'logo_instagram'
             },
             {
+              title: 'Twitter',
+              url: 'https://twitter.com/OakFirstFridays',
+              media: 'logo_twitter'
+            },
+            /*{
               title: 'Newsletter',
               url: '',
               media: 'today_fill'
+            },*/
+            {
+              title: 'Contact Us',
+              url: 'mailto:',
+              media: 'email_fill'
             },
           ],
 
