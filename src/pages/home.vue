@@ -22,15 +22,24 @@
     </f7-block>-->
 
 
-    <f7-button id="food" class="link" href="/food/"><span style = "background-color:#000">Food</span></f7-button>
+    <!--<f7-button id="food" class="link" href="/food/"><span style = "background-color:#000">Food</span></f7-button>
     <f7-button id="retail"class="responsive"><span style = "background-color:#000">Retail</span></f7-button>
     <f7-button id="music"class="responsive"><span style = "background-color:#000">Music</span></f7-button>
     <button id="entertainment"class="responsive"><span style = "background-color:#000">Entertainment</span></button>
     <button id="others"class="responsive"><span style = "background-color:#000">Others</span></button>
-    <button id="viewall"class="responsive"><span style = "background-color:#000">View All</span></button>
+    <button id="viewall"class="responsive"><span style = "background-color:#000">View All</span></button>-->
 
+    <f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
+    <f7-swiper-slide><img src="static/food.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/entertainment.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/music.png"></f7-swiper-slide>
+    </f7-swiper>
 
-
+    <f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
+    <f7-swiper-slide><img src="static/retail.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/others.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/viewall.jpg"></f7-swiper-slide>
+    </f7-swiper>
 
   </f7-page>
 </template>
@@ -96,3 +105,32 @@
     },
   };
 </script>
+
+<script>
+export default {
+  data () {
+    return {
+      items: 3
+    }
+  }
+}
+</script>
+
+<style lang="less" scoped>
+.swiper-container{
+  height: 35%;
+}
+.swiper-slide{
+  display: contain;
+  justify-content: center;
+  align-items: center;
+  background:#fff;
+  font-size: 25px;
+}
+
+.swiper-container img {
+width:100%;
+height:100%;
+overflow:hidden;
+}
+</style>
