@@ -32,16 +32,17 @@
                     class= "panel-close"
                     view=".view-main"
                     title="Performance & Activities"
-                    link=""
-                    @click="onSchedulePage"
+                    link="/schedule/"
+                    @click="showToastBottom"
 
                 ></f7-list-item>
                 <f7-list-item
                     class= "panel-close"
                     view=".view-main"
                     title="Event Map"
-                    link=""
-                    @click="onMapPage"
+                    link="/map/"
+                    @click="showToastBottom"
+
 
                 ></f7-list-item>
 
@@ -64,6 +65,7 @@
               </div>
             </f7-block>-->
             </div>
+            <!--PHOTO BROWSER
             <f7-photo-browser
 
               ref="pageSchedule"
@@ -85,7 +87,7 @@
               back-link-text="back"
               navbar-of-text="Event Map"
               @photobrowser:opened ="showToastBottom"
-            ></f7-photo-browser>
+            ></f7-photo-browser>-->
 
           </f7-page>
         </f7-view>
@@ -139,41 +141,41 @@
         ],
         photosMap: [
           {
-            url: 'static/pooh.jpg',
+            url: '../static/Map/pooh.jpg',
             caption: ''
           }
         ],
         photosSchedule: [
           {
-              url: 'static/24thStage_1.jpg',
+              url: '../static/Performances/24thStage_1.jpg',
 
           },
           {
-              url: 'static/24thStage_2.jpg',
+              url: '../static/Performances/24thStage_2.jpg',
 
           },
           {
-              url: 'static/24thStage_3.jpg',
+              url: '../static/Performances/24thStage_3.jpg',
 
           },
           {
-              url: 'static/24thStage_4.jpg',
+              url: '../static/Performances/24thStage_4.jpg',
 
           },
           {
-              url: 'static/24thStage_5.jpg',
+              url: '../static/Performances/24thStage_5.jpg',
 
           },
           {
-              url: 'static/25thStage.jpg',
+              url: '../static/Performances/25thStage.jpg',
 
           },
           {
-              url: 'static/25thStage_2.jpg',
+              url: '../static/Performances/25thStage_2.jpg',
 
           },
           {
-              url: 'static/27thStage.jpg',
+              url: '../static/Performances/27thStage.jpg',
 
           },
         ],
