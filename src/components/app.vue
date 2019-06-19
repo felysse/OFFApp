@@ -31,7 +31,7 @@
                 <f7-list-item
                     class= "panel-close"
                     view=".view-main"
-                    title="Performance & Activities"
+                    title="Performances"
                     link="/schedule/"
                     @click="showToastBottom"
 
@@ -181,7 +181,7 @@
         ],
         items2: [
            {
-            title: 'Report',
+            title: 'Report An Issue',
             link: '/report/'
           }, {
             title: 'Support Us',
