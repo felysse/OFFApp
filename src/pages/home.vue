@@ -91,6 +91,7 @@
         const self = this;
         // Destroy popup when page removed
         if (self.popup) self.popup.destroy();
+        
       },
     },
   };

@@ -37,7 +37,7 @@
   --f7-photobrowser-bars-bg-color: #fdc35b;
   --f7-photobrowser-bg-color: #f3f3f3;
   --f7-photobrowser-caption-light-bg-color: #f3f3f3;
-  --f7-color-picker-popup-bg-color: #fff;
+
 /*  --f7-list-bg-color: black;
   --f7-list-item-divider-border-color: white;
   --f7-list-item-title-text-color: white;
@@ -242,6 +242,7 @@
 
 .swiper-container{
   height: 35%;
+  z-index: -1;
 }
 .swiper-slide{
   display: contain;
@@ -249,10 +250,19 @@
   align-items: center;
   background:#fff;
   font-size: 25px;
+  z-index: -1;
 }
 
 .swiper-container img {
 width:100%;
 height:100%;
 overflow:hidden;
+z-index: -1;
+}
+
+.toast{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  
 }
