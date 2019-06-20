@@ -1,8 +1,35 @@
 <template>
-  <f7-page name="food">
-    <div class="block">
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
-    </div>
-    <f7-block-title>Food</f7-block-title>
+  <f7-page>
+    <f7-navbar title="Infinite Loop Mode" back-link="Back" sliding>
+      <f7-nav-right>
+        <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
+      </f7-nav-right>
+    </f7-navbar>
+    <f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 200, disableOnInteraction:false }}">
+      <f7-swiper-slide v-for="(item, index) in items" :key="index">{{'Slide ' + item}}</f7-swiper-slide>
+    </f7-swiper>
   </f7-page>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      items: 10
+    }
+  }
+}
+</script>
+
+<style lang="less" scoped>
+.swiper-container{
+  height: 50%;
+}
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#fff;
+  font-size: 25px;
+}
+</style>

@@ -31,7 +31,7 @@
                 <f7-list-item
                     class= "panel-close"
                     view=".view-main"
-                    title="Performance & Activities"
+                    title="Performances & Activities"
                     link="/schedule/"
                     @click="showToastBottom"
 
@@ -139,6 +139,7 @@
           },
 
         ],
+        /*
         photosMap: [
           {
             url: '../static/Map/pooh.jpg',
@@ -178,7 +179,7 @@
               url: '../static/Performances/27thStage.jpg',
 
           },
-        ],
+        ],*/
         items2: [
            {
             title: 'Report',

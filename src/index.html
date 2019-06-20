@@ -21,7 +21,6 @@
   <meta name="theme-color" content="#fdc35b">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <link rel="icon" href="../assets-src/cordova-ios-icon.png">
   <style type="text/css">
   .centerImage
   {
@@ -49,11 +48,11 @@
         }, 1000);
       }); -->
   		<div id="splash-screen"><img src="static/offlogo.png" class="centerImage"></div>
-  		<script type="text/javascript">
+  		<script type="text/javascript" src="js/app.js">
   			window.addEventListener('load', function () {
-  				setTimeout(function () {
-  					document.getElementById('splash-screen').style.display = 'center';
-  				}, 400);
+  				setTimeout(function() {
+  					window.getElementById('splash-screen');
+  				}, 40000);
   			});
   		</script>
 
