@@ -19,6 +19,7 @@
                   /></a>
                 </div>
               </div>
+
               <f7-list class="theme-light">
                 <f7-list-item v-for="(item, index) in items"
                     class: panel-close
@@ -26,18 +27,14 @@
                     :link="item.link"
                     :title="item.title"
                     :key="index"
-                    @click="showToastBottom"
+                    sheet-open=".demo-sheet-swipe-to-step"
                 ></f7-list-item>
                 <f7-list-item
                     class= "panel-close"
                     view=".view-main"
-<<<<<<< HEAD
-                    title="Performances & Activities"
-=======
                     title="Performances"
->>>>>>> 70025828e692b09e43ee879d1e923f8b97d3caa2
                     link="/schedule/"
-                    @click="showToastBottom"
+                    sheet-open=".demo-sheet-swipe-to-step"
 
                 ></f7-list-item>
                 <f7-list-item
@@ -45,7 +42,7 @@
                     view=".view-main"
                     title="Event Map"
                     link="/map/"
-                    @click="showToastBottom"
+                    sheet-open=".demo-sheet-swipe-to-step"
 
 
                 ></f7-list-item>
@@ -102,6 +99,30 @@
 
 
 
+  <f7-sheet
+    class="demo-sheet-swipe-to-step"
+    :opened="sheetOpened"
+    style="height:auto; --f7-sheet-bg-color: #fff;"
+    swipe-to-close
+    swipe-to-step
+    :backdrop="false"
+    :closeByOutsideClick="true"
+  >
+    <!-- Initial swipe step sheet content -->
+    <div class="sheet-modal-swipe-step">
+      <div class="margin-top text-align-center">
+        Support Us and <font color="fdc35b"> Swipe Up </font>to<b> Donate Now!</b>
+      </div>
+      <div class="padding-horizontal padding-bottom">
+
+      </div>
+    </div>
+    <!-- Rest of the sheet content that will opened with swipe -->
+    <f7-button large fill href="https://secure.squarespace.com/checkout/donate?donatePageId=5a8c9d92085229336036f459&ss_cid=e702a449-31b0-403d-a6c6-28ae11b45a66&ss_cvisit=1559254845736&ss_cvr=c0b21430-e79b-4aa6-8cd6-1ffce4f129f4%7C1554711350733%7C1559158626798%7C1559254847454%7C6" external>Donate</f7-button>
+    <br>
+
+  </f7-sheet>
+
 
   <!-- Your main view, should have "view-main" class -->
   <f7-views>
@@ -124,6 +145,8 @@
       </f7-page>
     </f7-view>
   </f7-popup>
+
+
 
 
 </f7-app>
