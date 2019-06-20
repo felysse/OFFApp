@@ -11,17 +11,6 @@
         </div>
     </div>
 
-    <!-- Toolbar-->
-    <!--<f7-toolbar bottom>
-      <f7-link>Left Link</f7-link>
-      <f7-link>Right Link</f7-link>
-    </f7-toolbar>-->
-    <!-- Page content-->
-    <!--<f7-block strong>
-      <p>Here is your blank Framework7 app. Let's see what we have here.</p>
-    </f7-block>-->
-
-
     <!--<f7-button id="food" class="link" href="/food/"><span style = "background-color:#000">Food</span></f7-button>
     <f7-button id="retail"class="responsive"><span style = "background-color:#000">Retail</span></f7-button>
     <f7-button id="music"class="responsive"><span style = "background-color:#000">Music</span></f7-button>
@@ -30,15 +19,15 @@
     <button id="viewall"class="responsive"><span style = "background-color:#000">View All</span></button>-->
 
     <f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
-    <f7-swiper-slide><img src="static/food.jpg"></f7-swiper-slide>
-    <f7-swiper-slide><img src="static/entertainment.jpg"></f7-swiper-slide>
-    <f7-swiper-slide><img src="static/music.png"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/HomeSlides/slide1.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/HomeSlides/slide2.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/HomeSlides/slide3.jpg"></f7-swiper-slide>
     </f7-swiper>
 
     <f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
-    <f7-swiper-slide><img src="static/retail.jpg"></f7-swiper-slide>
-    <f7-swiper-slide><img src="static/others.jpg"></f7-swiper-slide>
-    <f7-swiper-slide><img src="static/viewall.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/HomeSlides/slide4.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/HomeSlides/slide5.jpg"></f7-swiper-slide>
+    <f7-swiper-slide><img src="static/HomeSlides/slide6.jpg"></f7-swiper-slide>
     </f7-swiper>
 
   </f7-page>

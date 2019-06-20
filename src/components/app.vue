@@ -31,7 +31,11 @@
                 <f7-list-item
                     class= "panel-close"
                     view=".view-main"
+<<<<<<< HEAD
                     title="Performances & Activities"
+=======
+                    title="Performances"
+>>>>>>> 70025828e692b09e43ee879d1e923f8b97d3caa2
                     link="/schedule/"
                     @click="showToastBottom"
 
@@ -182,7 +186,7 @@
         ],*/
         items2: [
            {
-            title: 'Report',
+            title: 'Report An Issue',
             link: '/report/'
           }, {
             title: 'Support Us',
