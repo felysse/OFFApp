@@ -27,7 +27,7 @@
                     :link="item.link"
                     :title="item.title"
                     :key="index"
-                    sheet-open=".demo-sheet-swipe-to-step"
+
                 ></f7-list-item>
                 <f7-list-item
                     class= "panel-close"
@@ -118,10 +118,12 @@
       </div>
     </div>
     <!-- Rest of the sheet content that will opened with swipe -->
+    <f7-block>
     <f7-button large fill href="https://secure.squarespace.com/checkout/donate?donatePageId=5a8c9d92085229336036f459&ss_cid=e702a449-31b0-403d-a6c6-28ae11b45a66&ss_cvisit=1559254845736&ss_cvr=c0b21430-e79b-4aa6-8cd6-1ffce4f129f4%7C1554711350733%7C1559158626798%7C1559254847454%7C6" external>Donate</f7-button>
+    </f7-block>
     <br>
+    </f7-sheet>
 
-  </f7-sheet>
 
 
   <!-- Your main view, should have "view-main" class -->
