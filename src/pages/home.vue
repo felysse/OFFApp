@@ -1,8 +1,8 @@
 <template>
-  <f7-page @page:init="createPopup" name="home">
+  <f7-page @page:init="createPopup" @page:beforeremove="onPageBeforeRemove" name="home">
     <!-- Top Navbar -->
     <div class="block">
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
+        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" icon-size="25" panel-open="left"></f7-link>
     </div>
 
     <div id="element_block">
@@ -18,6 +18,7 @@
     <button id="others"class="responsive"><span style = "background-color:#000">Others</span></button>
     <button id="viewall"class="responsive"><span style = "background-color:#000">View All</span></button>-->
 
+
     <f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
     <f7-swiper-slide><img src="static/HomeSlides/slide1.jpg"></f7-swiper-slide>
     <f7-swiper-slide><img src="static/HomeSlides/slide2.jpg"></f7-swiper-slide>
@@ -29,6 +30,9 @@
     <f7-swiper-slide><img src="static/HomeSlides/slide5.jpg"></f7-swiper-slide>
     <f7-swiper-slide><img src="static/HomeSlides/slide6.jpg"></f7-swiper-slide>
     </f7-swiper>
+
+
+
 
   </f7-page>
 </template>
@@ -91,7 +95,7 @@
         const self = this;
         // Destroy popup when page removed
         if (self.popup) self.popup.destroy();
-        
+
       },
     },
   };

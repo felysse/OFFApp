@@ -1,27 +1,28 @@
 <template>
   <f7-page name="report">
-    <f7-navbar title="Report" back-link="Back"></f7-navbar>
-    <f7-block-title>Report</f7-block-title>
+    <f7-navbar title="Report An Issue" back-link="Back"></f7-navbar>
+    <f7-block-title>Report An Issue</f7-block-title>
     <f7-block>
     See any accidents or suspicious activities? <br>
     Click the button below to send a report via sms to our staff immediately
     <br>
     <br>
     <b>
-      *Do remember to include the location of incident in your Report
+      *Do remember to include the location of incident
     </b>
     <br>
     <br>
-      <f7-button fill href="sms:;" class="external" target="_blank">Send a Report</f7-button>
+      <f7-button fill href="sms:+14157481630;" class="external" target="_blank">Send an SMS</f7-button>
     <br>
 
     </f7-block>
 
 
       <f7-block class = "margin-top" title>
-      Or Else, Contact:<br>
-      Name: # <br>
-      Name: #
+      Or Else, Approach any Staff/Security Officer near you.
+      <br>
+      <br>
+      Thank you for making Oakland First Fridays a safer and better experience for all.
 
 
 

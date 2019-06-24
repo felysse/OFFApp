@@ -53,6 +53,7 @@
                     :link="item.link"
                     :title="item.title"
                     :key="index"
+                    sheet-open=".demo-sheet-swipe-to-step"
                 ></f7-list-item>
               </f7-list>
               <!--More Info-->
