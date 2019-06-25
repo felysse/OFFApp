@@ -10,6 +10,7 @@ import ReportPage from '../pages/report.vue'
 import LinksPage from '../pages/links.vue'
 import SponsorsPage from '../pages/sponsors.vue'
 import FoodPage from '../pages/food.vue'
+import CraftPage from '../pages/craft.vue'
 import SupportPage from '../pages/support.vue'
 
 
@@ -22,6 +23,7 @@ var routes = [
   {
     path: '/',
     component: HomePage,
+    keepAlive: true,
   },
   {
     path: '/about/',
@@ -62,6 +64,10 @@ var routes = [
   {
     path: '/food/',
     component: FoodPage,
+  },
+  {
+    path: '/craft/',
+    component: CraftPage,
   },
   {
     path: '/support/',
@@ -111,11 +117,11 @@ var routes = [
               url: 'https://pinnaclesfestivals.knack.com/oakff#home/',
               media: 'star_fill'
             },
-            {
+            /*{
               title: 'Feedback',
               url: 'https://www.oaklandfirstfridays.org/connect',
               media: 'compose'
-            }
+            }*/
           ]
         };
         // Hide Preloader
@@ -189,8 +195,8 @@ var routes = [
               media: 'today_fill'
             },*/
             {
-              title: 'Contact Us',
-              url: 'mailto:',
+              title: 'Feedback',
+              url: 'mailto:event@oaklandfirstfridays.org?subject=Feedback on Oakland First Fridays',
               media: 'email_fill'
             },
           ],

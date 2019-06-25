@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Performances & Activities" back-link="Back" sliding>
+    <f7-navbar title="Art & Craft" back-link="Back" sliding>
       <f7-nav-right>
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
@@ -18,16 +18,8 @@ export default {
   data () {
     return {
       items: [
-        'static/Performances/oakff-performance.png',
-        'static/Performances/23rdStage.jpg',
-        'static/Performances/24thStage_1.jpg',
-        './static/image/bscenery4.jpg',
-        './static/image/bscenery5.jpg',
-        './static/image/bscenery6.jpg',
-        './static/image/bscenery7.jpg',
-        './static/image/bscenery8.jpg',
-        './static/image/bscenery9.jpg',
-        './static/image/bscenery10.jpg'
+        'static/Craft/sample.jpg',
+
       ]
     }
   }

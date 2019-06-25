@@ -21,40 +21,24 @@
               </div>
 
               <f7-list class="theme-light">
+              <f7-list-item
+                  class= "panel-close"
+                  view=".view-main"
+                  title="Home"
+                  link="/"
+
+
+              ></f7-list-item>
                 <f7-list-item v-for="(item, index) in items"
-                    class: panel-close
-                    view=".view-main"
-                    :link="item.link"
-                    :title="item.title"
-                    :key="index"
-
-                ></f7-list-item>
-                <f7-list-item
                     class= "panel-close"
-                    view=".view-main"
-                    title="Performances"
-                    link="/schedule/"
-                    sheet-open=".demo-sheet-swipe-to-step"
-
-                ></f7-list-item>
-                <f7-list-item
-                    class= "panel-close"
-                    view=".view-main"
-                    title="Event Map"
-                    link="/map/"
-                    sheet-open=".demo-sheet-swipe-to-step"
-
-
-                ></f7-list-item>
-
-                <f7-list-item v-for="(item, index) in items2"
-                    class: panel-close
                     view=".view-main"
                     :link="item.link"
                     :title="item.title"
                     :key="index"
                     sheet-open=".demo-sheet-swipe-to-step"
+
                 ></f7-list-item>
+
               </f7-list>
               <!--More Info-->
               <!--<f7-block>
@@ -102,7 +86,6 @@
 
   <f7-sheet
     class="demo-sheet-swipe-to-step"
-    :opened="sheetOpened"
     style="height:auto; --f7-sheet-bg-color: #fff;"
     swipe-to-close
     swipe-to-step
@@ -164,10 +147,30 @@
         // Framework7 Parameters
         items: [
           {
-            title: 'Home',
-            link: '/'
+            title: 'Vendors',
+            link: '/vendors/'
           },
-
+          {
+            title: 'Performances',
+            link: '/schedule/'
+          },
+          {
+            title: 'Event Map',
+            link: '/map/'
+          },
+          {
+           title: 'Report An Issue',
+           link: '/report/'
+         }, {
+           title: 'Support Us',
+           link: '/support/'
+         },{
+           title: 'Links',
+           link: '/links/'
+         }, {
+           title: 'Sponsors',
+           link: '/sponsors/'
+         },
         ],
         /*
         photosMap: [
@@ -178,53 +181,24 @@
         ],
         photosSchedule: [
           {
-              url: '../static/Performances/24thStage_1.jpg',
+              url: '../www/static/Performances/24thStage_1.jpg',
 
           },
           {
-              url: '../static/Performances/24thStage_2.jpg',
+              url: '../www/static/Performances/24thStage_2.jpg',
 
           },
           {
-              url: '../static/Performances/24thStage_3.jpg',
+              url: '../www/static/Performances/24thStage_3.jpg',
 
           },
           {
-              url: '../static/Performances/24thStage_4.jpg',
+              url: '../www/static/Performances/24thStage_4.jpg',
 
           },
-          {
-              url: '../static/Performances/24thStage_5.jpg',
 
-          },
-          {
-              url: '../static/Performances/25thStage.jpg',
-
-          },
-          {
-              url: '../static/Performances/25thStage_2.jpg',
-
-          },
-          {
-              url: '../static/Performances/27thStage.jpg',
-
-          },
         ],*/
-        items2: [
-           {
-            title: 'Report An Issue',
-            link: '/report/'
-          }, {
-            title: 'Support Us',
-            link: '/support/'
-          },{
-            title: 'Links',
-            link: '/links/'
-          }, {
-            title: 'Sponsors',
-            link: '/sponsors/'
-          },
-        ],
+
 
         f7params: {
           id: 'io.framework7.myapp', // App bundle ID
@@ -288,7 +262,7 @@
         self.toastBottom.open();
       },
     },
-    mounted() {
+  /*  mounted() {
       this.$f7ready((f7) => {
         // Init cordova APIs (see cordova-app.js)
         if (f7.device.cordova) {
@@ -296,6 +270,6 @@
         }
         // Call F7 APIs here
       });
-    }
+    }*/
   }
 </script>

@@ -2,7 +2,7 @@
   <f7-page @page:init="createPopup" @page:beforeremove="onPageBeforeRemove" name="home">
     <!-- Top Navbar -->
     <div class="block">
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" icon-size="25" panel-open="left"></f7-link>
+        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" icon-size="28" panel-open="left"></f7-link>
     </div>
 
     <div id="element_block">
@@ -75,7 +75,7 @@
                   <div class="page-content" id="popbg">
                     <div class="dosdonts">
 
-                        <img src="../static/dosdonts.jpg"
+                        <img src="static/dosdonts.jpg"
                         width="100%"
                         height="auto"
                         />

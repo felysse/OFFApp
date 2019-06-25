@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       items: [
-        '../static/Map/pooh.jpg',
+        'static/Map/oakff-maps.png',
 
       ]
     }

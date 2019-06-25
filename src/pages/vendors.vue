@@ -1,7 +1,7 @@
 <template>
   <f7-page name="vendors">
     <div class="block">
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="left"></f7-link>
+        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-size="28" icon-md="material:menu" panel-open="left"></f7-link>
     </div>
     <f7-block-title>Vendors</f7-block-title>
     <f7-list>
@@ -32,12 +32,12 @@ export default {
           name: 'mat',
         },
         {
-          title: 'Retail',
-          link: '/vendors/',
-          media: 'local_mall',
+          title: 'Art & Craft',
+          link: '/craft/',
+          media: 'palette',
           name: 'mat'
         },
-        {
+        /*{
           title: 'Music',
           link: '/vendors/',
           media: 'music_note',
@@ -59,7 +59,7 @@ export default {
           title: 'View All',
           link: '/vendors/',
           media: ''
-        },
+        },*/
       ]
     }
   }
