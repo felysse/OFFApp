@@ -18,7 +18,11 @@ export default {
   data () {
     return {
       items: [
-        'static/Craft/sample.jpg',
+        'static/Craft/craft1.jpg',
+        'static/Craft/craft2.jpg',
+        'static/Craft/craft3.jpg',
+        'static/Craft/craft4.jpg',
+        'static/Craft/craft5.jpg',
 
       ]
     }

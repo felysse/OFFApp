@@ -18,7 +18,11 @@ export default {
   data () {
     return {
       items: [
-        'static/Food/sample.jpg',
+        'static/Food/food1.jpg',
+        'static/Food/food2.jpg',
+        'static/Food/food3.jpg',
+        'static/Food/food4.jpg',
+        'static/Food/food5.jpg',
 
       ]
     }

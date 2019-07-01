@@ -18,16 +18,16 @@ export default {
   data () {
     return {
       items: [
-        'static/Performances/oakff-performance.png',
-        'static/Performances/23rdStage.jpg',
-        'static/Performances/24thStage_1.jpg',
-        './static/image/bscenery4.jpg',
-        './static/image/bscenery5.jpg',
-        './static/image/bscenery6.jpg',
-        './static/image/bscenery7.jpg',
-        './static/image/bscenery8.jpg',
-        './static/image/bscenery9.jpg',
-        './static/image/bscenery10.jpg'
+        'static/Performances/performance1.jpg',
+        'static/Performances/performance2.jpg',
+        'static/Performances/performance3.jpg',
+        'static/Performances/performance4.jpg',
+        'static/Performances/performance5.jpg',
+        'static/Performances/performance6.jpg',
+        'static/Performances/performance7.jpg',
+        'static/Performances/performance8.jpg',
+        'static/Performances/performance9.jpg',
+        'static/Performances/performance10.jpg',
       ]
     }
   }
