@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Food" back-link="Back" sliding>
+    <f7-navbar title="Lounge" back-link="Back" sliding>
       <f7-nav-right>
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
@@ -18,11 +18,10 @@ export default {
   data () {
     return {
       items: [
-        'static/Food/food1.jpg',
-        'static/Food/food2.jpg',
-        'static/Food/food3.jpg',
-        'static/Food/food4.jpg',
-        'static/Food/food5.jpg',
+        'static/Lounge/lounge1.jpg',
+        'static/Lounge/lounge2.jpg',
+        'static/Lounge/lounge3.jpg',
+        'static/Lounge/lounge4.jpg',
       ]
     }
   }

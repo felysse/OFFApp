@@ -4,6 +4,7 @@ import AboutPage from '../pages/about.vue';
 import FormPage from '../pages/form.vue';
 import SchedulePage from '../pages/schedule.vue'
 import VendorsPage from '../pages/vendors.vue'
+import LoungePage from '../pages/lounge.vue'
 import MapPage from '../pages/map.vue'
 import InfoPage from '../pages/info.vue'
 import ReportPage from '../pages/report.vue'
@@ -41,6 +42,10 @@ var routes = [
   {
     path: '/vendors/',
     component: VendorsPage,
+  },
+  {
+    path: '/lounge/',
+    component: LoungePage,
   },
   {
     path: '/map/',
@@ -113,7 +118,7 @@ var routes = [
               media: 'persons_round_fill'
             },
             {
-              title: 'Perform or Set Up an Activity',
+              title: 'Become A Performer',
               url: 'https://pinnaclesfestivals.knack.com/oakff#home/',
               media: 'star_fill'
             },
@@ -195,7 +200,7 @@ var routes = [
               media: 'today_fill'
             },*/
             {
-              title: 'Feedback',
+              title: 'Contact Us',
               url: 'mailto:event@oaklandfirstfridays.org?subject=Feedback on Oakland First Fridays',
               media: 'email_fill'
             },

@@ -1,5 +1,5 @@
 <template>
-  <f7-page @page:init="createPopup" @page:beforeremove="onPageBeforeRemove" name="home">
+  <f7-page name="home">
     <!-- Top Navbar -->
     <div class="block">
         <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" icon-size="28" panel-open="left"></f7-link>

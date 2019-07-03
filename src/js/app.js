@@ -6,7 +6,7 @@ import Framework7 from './framework7-custom.js';
 
 // Import Framework7-Vue Plugin
 import Framework7Vue from 'framework7-vue/framework7-vue.esm.bundle.js';
-
+import CordovaApp from './cordova-app.js'
 
 // Import Framework7 Styles
 import '../css/framework7-custom.less';
@@ -20,8 +20,11 @@ import App from '../components/app.vue';
 
 import Framework7Icons from 'framework7-icons/css/framework7-icons.css'
 
+import Routes from './routes.js'
+
 // Init Framework7-Vue Plugin
 Framework7.use(Framework7Vue);
+Framework7.use(CordovaApp);
 // import 'viewerjs/dist/viewer.css';
 // import Viewer from 'v-viewer';
 // Vue.use(Viewer);
@@ -78,7 +81,8 @@ options: options,
 // Init App
 new Vue({
   el: '#app',
-  render: (h) => h(App),
+  //render: (h) => h(App),
+  template: '<app/>',
 
   /*framework7: {
     root: '#app',
@@ -87,10 +91,26 @@ new Vue({
     options: Options,
     },
   },*/
-
   // Register App Component
+  framework7: {
+    root: '#app',
+    dynamicNavbar: true,
+    animateNavBackIcon: true,
+
+    view: {
+      main: true,
+      pushState: true,
+      pushStateSeparator: '#',
+    },
+
+    //Uncomment to enable Material theme:
+    // material: true,
+    routes: Routes
+  },
   components: {
     app: App,
 
   },
+
+
 });

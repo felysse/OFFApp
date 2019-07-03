@@ -8,7 +8,7 @@
       <div class = "item-content">
         <div class = "image">
           <f7-link popup-open="#my-popup" href="https://www.letsblum.com/" external>
-            <img src="../static/Sponsors/blum.png" height = "70" /></a>
+            <img src="../static/Sponsors/sponsor1.png" height = "100" /></a>
           </f7-link>
         </div>
       </div>
@@ -16,7 +16,7 @@
       <div class = "item-content">
         <div class = "image">
           <f7-link popup-open="#my-popup" href="https://bigfamilymovers.com/" external>
-            <img src="../static/Sponsors/bfm.png" height = "90" /></a>
+            <img src="../static/Sponsors/sponsor2.png" height = "100" /></a>
           </f7-link>
         </div>
       </div>
@@ -24,7 +24,7 @@
       <div class = "item-content">
         <div class = "image">
           <f7-link popup-open="#my-popup" href="https://bigpictureanthems.com/" external>
-            <img src="../static/Sponsors/bpa.png" height = "95" /></a>
+            <img src="../static/Sponsors/sponsor3.png" height = "100" /></a>
           </f7-link>
         </div>
       </div>
@@ -32,7 +32,15 @@
       <div class = "item-content">
         <div class = "image">
           <f7-link popup-open="#my-popup" href="https://www.kevita.com/" external>
-            <img src="../static/Sponsors/kevita.png" height = "120" /></a>
+            <img src="../static/Sponsors/sponsor4.png" height = "100" /></a>
+          </f7-link>
+        </div>
+      </div>
+
+      <div class = "item-content">
+        <div class = "image">
+          <f7-link popup-open="#my-popup" href="https://www.kevita.com/" external>
+            <img src="../static/Sponsors/sponsor5.png" height = "120" /></a>
           </f7-link>
         </div>
       </div>

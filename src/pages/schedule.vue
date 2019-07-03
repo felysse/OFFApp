@@ -18,16 +18,16 @@ export default {
   data () {
     return {
       items: [
-        'static/Performances/oakff-performance.png',
-        'static/Performances/23rdStage.jpg',
-        'static/Performances/24thStage_1.jpg',
-        './static/image/bscenery4.jpg',
-        './static/image/bscenery5.jpg',
-        './static/image/bscenery6.jpg',
-        './static/image/bscenery7.jpg',
-        './static/image/bscenery8.jpg',
-        './static/image/bscenery9.jpg',
-        './static/image/bscenery10.jpg'
+        'static/Performances/perf1.jpg',
+        'static/Performances/perf2.jpg',
+        'static/Performances/perf3.jpg',
+        'static/Performances/perf4.jpg',
+        'static/Performances/perf5.jpg',
+        'static/Performances/perf6.jpg',
+        'static/Performances/perf7.jpg',
+        'static/Performances/perf8.jpg',
+        'static/Performances/perf9.jpg',
+        'static/Performances/perf10.jpg'
       ]
     }
   }
@@ -47,5 +47,6 @@ export default {
       object-fit: contain;
     }
   }
+  
 }
 </style>

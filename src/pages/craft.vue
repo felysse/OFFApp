@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Art & Craft" back-link="Back" sliding>
+    <f7-navbar title="Art & Craft" back-link="Back" class="back" sliding>
       <f7-nav-right>
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
@@ -18,7 +18,11 @@ export default {
   data () {
     return {
       items: [
-        'static/Craft/sample.jpg',
+        'static/Craft/craft1.jpg',
+        'static/Craft/craft2.jpg',
+        'static/Craft/craft3.jpg',
+        'static/Craft/craft4.jpg',
+        'static/Craft/craft5.jpg',
 
       ]
     }

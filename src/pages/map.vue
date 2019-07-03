@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       items: [
-        'static/Map/oakff-maps.png',
+        'static/Map/map.jpg',
 
       ]
     }
@@ -39,5 +39,6 @@ export default {
       object-fit: contain;
     }
   }
+
 }
 </style>

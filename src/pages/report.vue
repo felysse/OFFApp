@@ -12,7 +12,7 @@
     </b>
     <br>
     <br>
-      <f7-button fill href="sms:+14157481630;" class="external" target="_blank">Send an SMS</f7-button>
+      <f7-button fill href="sms://+14157481630" class="external" target="_blank">Send an SMS</f7-button>
     <br>
 
     </f7-block>
@@ -25,7 +25,7 @@
       Thank you for making Oakland First Fridays a safer and better experience for all.
 
 
-
+      
 
       </f7-block>
 

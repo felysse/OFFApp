@@ -97,14 +97,51 @@
       <div class="margin-top text-align-center">
         Support Us and <font color="fdc35b"> Swipe Up </font>to<b> Donate Now!</b>
       </div>
-      <div class="padding-horizontal padding-bottom">
-
-      </div>
+      <div class="padding-horizontal padding-bottom"></div>
     </div>
+
     <!-- Rest of the sheet content that will opened with swipe -->
     <f7-block>
-    <f7-button large fill href="https://secure.squarespace.com/checkout/donate?donatePageId=5a8c9d92085229336036f459&ss_cid=e702a449-31b0-403d-a6c6-28ae11b45a66&ss_cvisit=1559254845736&ss_cvr=c0b21430-e79b-4aa6-8cd6-1ffce4f129f4%7C1554711350733%7C1559158626798%7C1559254847454%7C6" external>Donate</f7-button>
+  <!--KIV
+    <div>
+    <form>
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="input-group-text">$</span></div>
+                                <input type="number" id="amount" v-model="amount" class="form-control" placeholder="Enter Amount">
+                            </div>
+                        </div>
+                         <hr />
+                        <div class="form-group">
+                            <label>Credit Card Number</label>
+                            <div id="creditCardNumber" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label>Expire Date</label>
+                                    <div id="expireDate" class="form-control"></div>
+                                </div>
+                                <div class="col-6">
+                                    <label>CVV</label>
+                                    <div id="cvv" class="form-control"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block" style="background-color:#fdc35b;color:white;border:#fdc35b"@click.prevent="payWithCreditCard">Donate with Credit Card</button>
+                        <hr />
+                        <div id="paypalButton"></div>
+
+                    </form>
+                  </div>-->
+                  <f7-button fill href="https://secure.squarespace.com/checkout/donate?donatePageId=5a8c9d92085229336036f459&ss_cid=e702a449-31b0-403d-a6c6-28ae11b45a66&ss_cvisit=1562175421959&ss_cvr=c0b21430-e79b-4aa6-8cd6-1ffce4f129f4%7C1554711350733%7C1560970771181%7C1562175423460%7C24" class="external" target="_blank">Donate</f7-button>
+
+
     </f7-block>
+    <div class="alert alert-danger" v-if="error">
+   {{ error }}
+</div>
     <br>
     </f7-sheet>
 
@@ -140,15 +177,26 @@
 <script>
   import cordovaApp from '../js/cordova-app.js';
   import routes from '../js/routes.js';
+  import braintree from 'braintree-web';
+  import paypal from 'paypal-checkout';
 
   export default {
     data() {
+
       return {
+        hostedFieldInstance: false,
+        nonce: "",
+        error: "",
+        amount: 10,
         // Framework7 Parameters
         items: [
           {
             title: 'Vendors',
             link: '/vendors/'
+          },
+          {
+            title: 'KONO Lounge',
+            link: '/lounge/'
           },
           {
             title: 'Performances',
@@ -240,6 +288,33 @@
       }
     },
     methods: {
+
+    payWithCreditCard() {
+     if(this.hostedFieldInstance)
+     {
+          this.error = "";
+          this.nonce = "";
+
+         this.hostedFieldInstance.tokenize().then(payload => {
+             console.log(payload);
+         })
+         .catch(err => {
+             console.error(err);
+             this.error = err.message;
+
+         })
+     }
+     },
+     onDeviceReady() {
+        console.log('ready');
+        document.addEventListener("backbutton", this.onBackKeyDown, false);
+      },
+      onBackKeyDown(e) {
+        e.preventDefault()
+        this.$f7router.back();
+      },
+
+
       alertLoginData() {
         this.$f7.dialog.alert('Username: ' + this.username + '<br>Password: ' + this.password);
       },
@@ -262,14 +337,165 @@
         self.toastBottom.open();
       },
     },
-  /*  mounted() {
+    mounted() {
+  /*  braintree.client.create({
+            authorization: "sandbox_93smtrz3_bbgx4xf7h8bx24xg"
+        })
+        .then(clientInstance => {
+            let options = {
+                client: clientInstance,
+                styles: {
+                    input: {
+                        'font-size': '14px',
+                        'font-family': 'Open Sans'
+                    }
+                },
+                fields: {
+                    number: {
+                        selector: '#creditCardNumber',
+                        placeholder: 'Enter Credit Card'
+                    },
+                    cvv: {
+                        selector: '#cvv',
+                        placeholder: 'Enter CVV'
+                    },
+                    expirationDate: {
+                        selector: '#expireDate',
+                        placeholder: 'MM / YYYY'
+                    }
+                }
+            }
+            return Promise.all([
+                braintree.hostedFields.create(options),
+                braintree.paypalCheckout.create({ client: clientInstance })
+            ])
+        })
+        .then(instances => {
+            const hostedFieldInstance    = instances[0];
+            const paypalCheckoutInstance = instances[1];
+            // Use hostedFieldInstance to send data to Braintree
+            this.hostedFieldInstance = hostedFieldInstance;
+            // Setup PayPal Button
+                return paypal.Button.render({
+                    env: 'sandbox',
+                    style: {
+                        label: 'paypal',
+                        size: 'responsive',
+                        shape: 'rect'
+                    },
+                    payment: () => {
+                        return paypalCheckoutInstance.createPayment({
+                                flow: 'checkout',
+                                intent: 'sale',
+                                amount: parseFloat(this.amount) > 0 ? this.amount : 10,
+                                displayName: 'Braintree Testing',
+                                currency: 'USD'
+                        })
+                    },
+                    onAuthorize: (data, options) => {
+                        return paypalCheckoutInstance.tokenizePayment(data).then(payload => {
+                            console.log(payload);
+                            this.error = "";
+                            this.nonce = payload.nonce;
+                        })
+                    },
+                    onCancel: (data) => {
+                        console.log(data);
+                        console.log("Payment Cancelled");
+                    },
+                    onError: (err) => {
+                        console.error(err);
+                        this.error = "An error occurred while processing the paypal payment.";
+                    }
+                }, '#paypalButton')
+        })
+        .catch(err => {
+        });
+
+    document.addEventListener('backbutton', () => {
+       alert('back');
+        // on device back button go back
+        this.$f7.views.main.router.back();
+        // if in home page exit app?? navigator.app.exitApp();
+  }, false)*/
+
       this.$f7ready((f7) => {
+        var app = this.$f7;
+        var $$ = this.$$;
+
+        // Listen to Cordova's backbutton event
+        document.addEventListener('backbutton', function navigateBack() {
+                // Use Framework7's router to navigate back
+                    var mainView = app.views.main;
+
+                    var leftp = app.panel.left && app.panel.left.opened;
+                    var rightp = app.panel.right && app.panel.right.opened;
+
+                    if (leftp || rightp) {
+
+                        app.panel.close();
+                        return false;
+                    } else if ($$('.modal-in').length > 0) {
+
+                        app.dialog.close();
+                        app.popup.close();
+                        return false;
+                    } else if (app.views.main.router.url == '/') {
+                        navigator.app.exitApp();
+                      }
+                      else if (app.views.main.router.url == '/lounge/') {
+                          app.views.main.router.url = '/';
+                      }
+                     else {
+                          app.views.main.router.back();
+                    }
+
+            }
+            , false)
+        //f7.dialog.alert('Component mounted');
+        //document.addEventListener("deviceready", console.log('test'), false);
+        /*var app = this.$f7;
+        var $$ = this.$$;
+
+        // Listen to Cordova's backbutton event
+        document.addEventListener('backbutton', function navigateBack() {
+                // Use Framework7's router to navigate back
+
+                    var mainView = app.views.main;
+
+                    var leftp = app.panel.left && app.panel.left.opened;
+                    var rightp = app.panel.right && app.panel.right.opened;
+
+                    if (leftp || rightp) {
+
+                        app.panel.close();
+                        return false;
+                    } else if ($$('.modal-in').length > 0) {
+
+                        app.dialog.close();
+                        app.popup.close();
+                        return false;
+                    } else if (app.views.main.router.url == '/') {
+                        alert('Component mounted');
+                        navigator.app.exitApp();
+
+                    } else {
+                        alert('Component mounted');
+                        mainView.router.go(-1);
+
+                    }
+
+            }
+            , false)*/
+
         // Init cordova APIs (see cordova-app.js)
-        if (f7.device.cordova) {
+      if (f7.device.cordova) {
           cordovaApp.init(f7);
-        }
-        // Call F7 APIs here
+
+       }
       });
-    }*/
+
+
+    }
   }
 </script>

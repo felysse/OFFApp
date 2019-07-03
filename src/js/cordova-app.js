@@ -24,12 +24,17 @@ var cordovaApp = {
         if (window.navigator.app && window.navigator.app.exitApp) {
           window.navigator.app.exitApp();
         }
+
         return true;
       }
       cordovaApp.backButtonTimestamp = new Date().getTime();
       e.preventDefault();
       return false;
     }, false);
+
+
+
+
   },
   /*
   This method does the following:
@@ -81,8 +86,8 @@ var cordovaApp = {
   },
 
 
-sendSms: function() {
-  var number = document.getElementById('numberTxt').value.toString(); /* iOS: ensure number is actually a string */
+/*sendSms: function() {
+//  var number = document.getElementById('numberTxt').value.toString();  iOS: ensure number is actually a string
   var message = document.getElementById('messageTxt').value;
   console.log("number=" + number + ", message= " + message);
 
@@ -127,7 +132,7 @@ requestSMSPermission: function() {
   };
   var error = function (e) { alert('Something went wrong:' + e); };
   sms.hasPermission(success, error);
-},
+},*/
 
 
 
@@ -145,13 +150,13 @@ requestSMSPermission: function() {
     cordovaApp.handleKeyboard();
 
     //Handle SMS
-    cordovaApp.sendSms();
+  //  cordovaApp.sendSms();
 
 
-    cordovaApp.checkSMSPermission();
+  //  cordovaApp.checkSMSPermission();
 
 
-    cordovaApp.requestSMSPermission();
+  //  cordovaApp.requestSMSPermission();
   },
 };
 export default cordovaApp;
