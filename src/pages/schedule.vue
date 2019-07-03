@@ -18,16 +18,16 @@ export default {
   data () {
     return {
       items: [
-        'static/Performances/perf1.jpg',
-        'static/Performances/perf2.jpg',
-        'static/Performances/perf3.jpg',
-        'static/Performances/perf4.jpg',
-        'static/Performances/perf5.jpg',
-        'static/Performances/perf6.jpg',
-        'static/Performances/perf7.jpg',
-        'static/Performances/perf8.jpg',
-        'static/Performances/perf9.jpg',
-        'static/Performances/perf10.jpg'
+        'static/Performances/performance1.jpg',
+        'static/Performances/performance2.jpg',
+        'static/Performances/performance3.jpg',
+        'static/Performances/performance4.jpg',
+        'static/Performances/performance5.jpg',
+        'static/Performances/performance6.jpg',
+        'static/Performances/performance7.jpg',
+        'static/Performances/performance8.jpg',
+        'static/Performances/performance9.jpg',
+        'static/Performances/performance10.jpg',
       ]
     }
   }
@@ -47,6 +47,6 @@ export default {
       object-fit: contain;
     }
   }
-  
+
 }
 </style>
