@@ -21,7 +21,6 @@ export default {
         'static/Lounge/lounge1.jpg',
         'static/Lounge/lounge2.jpg',
         'static/Lounge/lounge3.jpg',
-        'static/Lounge/lounge4.jpg',
       ]
     }
   }

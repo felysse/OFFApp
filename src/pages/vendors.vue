@@ -1,8 +1,7 @@
 <template>
   <f7-page name="vendors">
-    <div class="block">
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-size="28" icon-md="material:menu" panel-open="left"></f7-link>
-    </div>
+        <f7-navbar title="Vendors" back-link="Back"></f7-navbar>
+
     <f7-block-title>Vendors</f7-block-title>
     <f7-list>
       <f7-list-item v-for="(item, index) in items"

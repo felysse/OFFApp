@@ -25,7 +25,7 @@
       Thank you for making Oakland First Fridays a safer and better experience for all.
 
 
-      
+
 
       </f7-block>
 
@@ -34,22 +34,3 @@
 
   </f7-page>
 </template>
-
-<script>
-  import cordovaApp from '../js/cordova-app.js';
-  export default{
-    mounted() {
-      this.$f7ready((f7) => {
-        // Init cordova APIs (see cordova-app.js)
-        if (f7.device.cordova) {
-          cordovaApp.init(f7);
-          }
-      // Call F7 APIs here
-          cordovaApp.sendSms();
-          cordovaApp.checkSMSPermission();
-          cordovaApp.requestSMSPermission();
-
-          });
-        }
-      }
-</script>

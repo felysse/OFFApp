@@ -13,7 +13,7 @@
             <div class = "page-content">
               <div class = "item-content">
                 <div class = "image1">
-                  <a href="/"><img src="../../assets-src/oaklandfirstfridays.png"
+                  <img src="../../assets-src/oaklandfirstfridays.png"
                   width="100%"
                   height="auto"
                   /></a>
@@ -21,11 +21,11 @@
               </div>
 
               <f7-list class="theme-light">
-              <f7-list-item
+            /*  <f7-list-item
                   class= "panel-close"
                   view=".view-main"
                   title="Home"
-                  link="/"
+                  link="/"*/
 
 
               ></f7-list-item>
@@ -412,81 +412,38 @@
         .catch(err => {
         });
 
-    document.addEventListener('backbutton', () => {
-       alert('back');
-        // on device back button go back
-        this.$f7.views.main.router.back();
-        // if in home page exit app?? navigator.app.exitApp();
-  }, false)*/
+    */
 
       this.$f7ready((f7) => {
-        var app = this.$f7;
-        var $$ = this.$$;
 
-        // Listen to Cordova's backbutton event
-        document.addEventListener('backbutton', function navigateBack() {
-                // Use Framework7's router to navigate back
-                    var mainView = app.views.main;
+      var app = this.$f7;
+      var $$ = this.$$;
+      document.addEventListener('backbutton', function navigateBack() {
+              // Use Framework7's router to navigate back
+                  var mainView = app.views.main;
 
-                    var leftp = app.panel.left && app.panel.left.opened;
-                    var rightp = app.panel.right && app.panel.right.opened;
+                  var leftp = app.panel.left && app.panel.left.opened;
+                  var rightp = app.panel.right && app.panel.right.opened;
 
-                    if (leftp || rightp) {
+                  if (leftp || rightp) {
+                      app.panel.close();
+                      return false;
+                  }
+                  /*else if ($$('.modal-in').length > 0) {
+                      app.dialog.close();
+                      app.popup.close();
+                      return false;
+                  }*/
+                   else if (app.views.main.router.url == '/') {
+                      navigator.app.exitApp();
+                  } else {
+                     mainView.router.back();
+                  }
 
-                        app.panel.close();
-                        return false;
-                    } else if ($$('.modal-in').length > 0) {
+          }
+          , false)
 
-                        app.dialog.close();
-                        app.popup.close();
-                        return false;
-                    } else if (app.views.main.router.url == '/') {
-                        navigator.app.exitApp();
-                      }
-                      else if (app.views.main.router.url == '/lounge/') {
-                          app.views.main.router.url = '/';
-                      }
-                     else {
-                          app.views.main.router.back();
-                    }
 
-            }
-            , false)
-        //f7.dialog.alert('Component mounted');
-        //document.addEventListener("deviceready", console.log('test'), false);
-        /*var app = this.$f7;
-        var $$ = this.$$;
-
-        // Listen to Cordova's backbutton event
-        document.addEventListener('backbutton', function navigateBack() {
-                // Use Framework7's router to navigate back
-
-                    var mainView = app.views.main;
-
-                    var leftp = app.panel.left && app.panel.left.opened;
-                    var rightp = app.panel.right && app.panel.right.opened;
-
-                    if (leftp || rightp) {
-
-                        app.panel.close();
-                        return false;
-                    } else if ($$('.modal-in').length > 0) {
-
-                        app.dialog.close();
-                        app.popup.close();
-                        return false;
-                    } else if (app.views.main.router.url == '/') {
-                        alert('Component mounted');
-                        navigator.app.exitApp();
-
-                    } else {
-                        alert('Component mounted');
-                        mainView.router.go(-1);
-
-                    }
-
-            }
-            , false)*/
 
         // Init cordova APIs (see cordova-app.js)
       if (f7.device.cordova) {
