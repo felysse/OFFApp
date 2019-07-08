@@ -19,7 +19,7 @@ data () {
       'static/Sponsors/sponsors2.jpg',
       'static/Sponsors/sponsors3.jpg',
       'static/Sponsors/sponsors4.jpg',
-      'static/Sponsors/sponsors4.jpg',
+      'static/Sponsors/sponsors5.jpg',
     ]
   }
 }
