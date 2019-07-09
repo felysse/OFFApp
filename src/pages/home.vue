@@ -11,9 +11,9 @@
         </div>
     </div>
 
-    <f7-button id="food" class="link" href="/Vendors/"><span style = "background-color:#000">Vendors</span></f7-button>
-    <f7-button id="retail"class="link" href="/schedule/"><span style = "background-color:#000">Performances</span></f7-button>
-    <f7-button id="music"class="link" href="/map/"><span style = "background-color:#000">Map</span></f7-button>
+    <f7-button id="food" href="/Vendors/"><img src="static/HomeSlides/slide6.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Vendors</span></f7-button>
+    <f7-button id="retail"class="link" href="/schedule/"><img src="static/HomeSlides/slide2.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Performances</span></f7-button>
+    <f7-button id="music"class="link" href="/map/"><img src="static/HomeSlides/slide3.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Map</span></f7-button>
     <!--<button id="entertainment"class="responsive"><span style = "background-color:#000">Entertainment</span></button>
     <button id="others"class="responsive"><span style = "background-color:#000">Others</span></button>
     <button id="viewall"class="responsive"><span style = "background-color:#000">View All</span></button>
