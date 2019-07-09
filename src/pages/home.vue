@@ -24,8 +24,8 @@
     <f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
     <f7-swiper-slide><img src="static/HomeSlides/slide4.jpg"></f7-swiper-slide>
     <f7-swiper-slide><img src="static/HomeSlides/slide5.jpg"></f7-swiper-slide>
-    <f7-swiper-slide><img src="static/HomeSlides/slide6.jpg"></f7-swiper-slide>-->
-    </f7-swiper>
+    <f7-swiper-slide><img src="static/HomeSlides/slide6.jpg"></f7-swiper-slide>
+    </f7-swiper>-->
 
 
 
