@@ -25,10 +25,6 @@ import Routes from './routes.js'
 // Init Framework7-Vue Plugin
 Framework7.use(Framework7Vue);
 
-// import 'viewerjs/dist/viewer.css';
-// import Viewer from 'v-viewer';
-// Vue.use(Viewer);
-//import welcomescreen from 'f7-welcomescreen'
 
 // Init App
 new Vue({
@@ -36,13 +32,6 @@ new Vue({
   render: (h) => h(App),
 //  template: '<app/>',
 
-  /*framework7: {
-    root: '#app',
-    welcomescreen: { // Setup welcomescreen plugin
-    slides: Welcomescreen_slides,
-    options: Options,
-    },
-  },*/
   // Register App Component
   framework7: {
     root: '#app',
@@ -63,6 +52,5 @@ new Vue({
     app: App,
 
   },
-
 
 });
