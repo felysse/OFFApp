@@ -15,7 +15,7 @@
     <f7-button id="schedule"class="link" href="/schedule/"><img src="static/schedule.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Performances</span></f7-button>
     <f7-button id="map"class="link" href="/map/"><img src="static/mapbutton.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Map</span></f7-button>
 
-    <f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
+    <!--<f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
     <f7-swiper-slide><img src="static/HomeSlides/slide1.jpg"></f7-swiper-slide>
     <f7-swiper-slide><img src="static/HomeSlides/slide2.jpg"></f7-swiper-slide>
     <f7-swiper-slide><img src="static/HomeSlides/slide3.jpg"></f7-swiper-slide>
