@@ -21,14 +21,14 @@
               </div>
 
               <f7-list class="theme-light">
-            /*  <f7-list-item
+            <!--  <f7-list-item
                   class= "panel-close"
                   view=".view-main"
                   title="Home"
-                  link="/"*/
+                  link="/"
 
 
-              ></f7-list-item>
+              ></f7-list-item>-->
                 <f7-list-item v-for="(item, index) in items"
                     class= "panel-close"
                     view=".view-main"
@@ -102,39 +102,7 @@
 
     <!-- Rest of the sheet content that will opened with swipe -->
     <f7-block>
-  <!--KIV
-    <div>
-    <form>
-                        <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend"><span class="input-group-text">$</span></div>
-                                <input type="number" id="amount" v-model="amount" class="form-control" placeholder="Enter Amount">
-                            </div>
-                        </div>
-                         <hr />
-                        <div class="form-group">
-                            <label>Credit Card Number</label>
-                            <div id="creditCardNumber" class="form-control"></div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-6">
-                                    <label>Expire Date</label>
-                                    <div id="expireDate" class="form-control"></div>
-                                </div>
-                                <div class="col-6">
-                                    <label>CVV</label>
-                                    <div id="cvv" class="form-control"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary btn-block" style="background-color:#fdc35b;color:white;border:#fdc35b"@click.prevent="payWithCreditCard">Donate with Credit Card</button>
-                        <hr />
-                        <div id="paypalButton"></div>
 
-                    </form>
-                  </div>-->
                   <f7-button fill href="https://secure.squarespace.com/checkout/donate?donatePageId=5a8c9d92085229336036f459&ss_cid=e702a449-31b0-403d-a6c6-28ae11b45a66&ss_cvisit=1562175421959&ss_cvr=c0b21430-e79b-4aa6-8cd6-1ffce4f129f4%7C1554711350733%7C1560970771181%7C1562175423460%7C24" class="external" target="_blank">Donate</f7-button>
 
 
@@ -153,7 +121,7 @@
   </f7-views>
 
 
-  <!-- Popup -->
+  <!-- Popup Template if required -->
   <f7-popup id="my-popup">
     <f7-view>
       <f7-page>
@@ -286,33 +254,6 @@
       }
     },
     methods: {
-
-    payWithCreditCard() {
-     if(this.hostedFieldInstance)
-     {
-          this.error = "";
-          this.nonce = "";
-
-         this.hostedFieldInstance.tokenize().then(payload => {
-             console.log(payload);
-         })
-         .catch(err => {
-             console.error(err);
-             this.error = err.message;
-
-         })
-     }
-     },
-     onDeviceReady() {
-        console.log('ready');
-        document.addEventListener("backbutton", this.onBackKeyDown, false);
-      },
-      onBackKeyDown(e) {
-        e.preventDefault()
-        this.$f7router.back();
-      },
-
-
       alertLoginData() {
         this.$f7.dialog.alert('Username: ' + this.username + '<br>Password: ' + this.password);
       },
@@ -336,83 +277,9 @@
       },
     },
     mounted() {
-  /*  braintree.client.create({
-            authorization: "sandbox_93smtrz3_bbgx4xf7h8bx24xg"
-        })
-        .then(clientInstance => {
-            let options = {
-                client: clientInstance,
-                styles: {
-                    input: {
-                        'font-size': '14px',
-                        'font-family': 'Open Sans'
-                    }
-                },
-                fields: {
-                    number: {
-                        selector: '#creditCardNumber',
-                        placeholder: 'Enter Credit Card'
-                    },
-                    cvv: {
-                        selector: '#cvv',
-                        placeholder: 'Enter CVV'
-                    },
-                    expirationDate: {
-                        selector: '#expireDate',
-                        placeholder: 'MM / YYYY'
-                    }
-                }
-            }
-            return Promise.all([
-                braintree.hostedFields.create(options),
-                braintree.paypalCheckout.create({ client: clientInstance })
-            ])
-        })
-        .then(instances => {
-            const hostedFieldInstance    = instances[0];
-            const paypalCheckoutInstance = instances[1];
-            // Use hostedFieldInstance to send data to Braintree
-            this.hostedFieldInstance = hostedFieldInstance;
-            // Setup PayPal Button
-                return paypal.Button.render({
-                    env: 'sandbox',
-                    style: {
-                        label: 'paypal',
-                        size: 'responsive',
-                        shape: 'rect'
-                    },
-                    payment: () => {
-                        return paypalCheckoutInstance.createPayment({
-                                flow: 'checkout',
-                                intent: 'sale',
-                                amount: parseFloat(this.amount) > 0 ? this.amount : 10,
-                                displayName: 'Braintree Testing',
-                                currency: 'USD'
-                        })
-                    },
-                    onAuthorize: (data, options) => {
-                        return paypalCheckoutInstance.tokenizePayment(data).then(payload => {
-                            console.log(payload);
-                            this.error = "";
-                            this.nonce = payload.nonce;
-                        })
-                    },
-                    onCancel: (data) => {
-                        console.log(data);
-                        console.log("Payment Cancelled");
-                    },
-                    onError: (err) => {
-                        console.error(err);
-                        this.error = "An error occurred while processing the paypal payment.";
-                    }
-                }, '#paypalButton')
-        })
-        .catch(err => {
-        });
-
-    */
 
       this.$f7ready((f7) => {
+      //Handles Android Back Button
       var app = this.$f7;
       var $$ = this.$$;
       document.addEventListener('backbutton', function navigateBack() {

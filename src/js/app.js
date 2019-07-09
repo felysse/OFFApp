@@ -24,17 +24,17 @@ import Routes from './routes.js'
 
 // Init Framework7-Vue Plugin
 Framework7.use(Framework7Vue);
-Framework7.use(CordovaApp);
+
 // import 'viewerjs/dist/viewer.css';
 // import Viewer from 'v-viewer';
 // Vue.use(Viewer);
-import welcomescreen from 'f7-welcomescreen'
+//import welcomescreen from 'f7-welcomescreen'
 
 // Init App
 new Vue({
   el: '#app',
-  //render: (h) => h(App),
-  template: '<app/>',
+  render: (h) => h(App),
+//  template: '<app/>',
 
   /*framework7: {
     root: '#app',

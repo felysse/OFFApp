@@ -1,4 +1,4 @@
-<template>
+<template> <!-- ACCORDIAN SHEET IF EVER NEEDED-->
   <f7-page name="info">
     <f7-navbar title="Info" back-link="Back"></f7-navbar>
     <f7-block-title>More Information</f7-block-title>

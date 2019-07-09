@@ -56,7 +56,7 @@
         items: 3
       };
     },
-    /*methods: {
+    /*methods: {    //Popup if required
       createPopup() {
         const self = this;
         // Create popup
