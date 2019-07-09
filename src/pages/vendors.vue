@@ -37,12 +37,6 @@ export default {
           name: 'mat'
         },
         /*{
-          title: 'Music',
-          link: '/vendors/',
-          media: 'music_note',
-          name: 'mat'
-        },
-        {
           title: 'Entertainment',
           link: '/vendors/',
           media: 'local_activity',

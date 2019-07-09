@@ -30,54 +30,6 @@ Framework7.use(CordovaApp);
 // Vue.use(Viewer);
 import welcomescreen from 'f7-welcomescreen'
 
-/*Framework7.use(welcomescreen);
-
-
-var Welcomescreen_slides = [
-{
-id: 'slide0',
-title: 'Slide 0', // optional
-picture: '<div class="tutorialicon">♥</div>',
-text: 'Welcome to this tutorial. In the next steps we will guide you through a manual that will teach you how to use this app.'
-},
-{
-id: 'slide1',
-title: 'Slide 1', // optional
-picture: '<div class="tutorialicon">✲</div>',
-text: 'This is slide 2'
-},
-{
-id: 'slide2',
-title: 'Slide 2', // optional
-picture: '<div class="tutorialicon">♫</div>',
-text: 'This is slide 3'
-},
-{
-id: 'slide3',
-//title: 'NO TITLE',
-picture: '<div class="tutorialicon">☆</div>',
-text: 'Thanks for reading! Enjoy this app.<br><br><a id="tutorial-close-btn" href="#">End Tutorial</a>'
-}
-];
-
-
-
-// Define options for welcomescreen plugin
-var Options = {
-'bgcolor': '#0da6ec',
-'fontcolor': '#fff'
-}*/
-
-/*var app = new Framework7({
-root: '#app', // or what ever your root is
-name: 'welcomescreen-demo', // choose a name
-welcomescreen: { // Setup welcomescreen plugin
-slides: welcomescreen_slides,
-options: options,
-},
-});*/
-
-
 // Init App
 new Vue({
   el: '#app',

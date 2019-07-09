@@ -4,7 +4,6 @@ import AboutPage from '../pages/about.vue';
 import FormPage from '../pages/form.vue';
 import SchedulePage from '../pages/schedule.vue'
 import VendorsPage from '../pages/vendors.vue'
-import LoungePage from '../pages/lounge.vue'
 import MapPage from '../pages/map.vue'
 import InfoPage from '../pages/info.vue'
 import ReportPage from '../pages/report.vue'
@@ -13,7 +12,7 @@ import SponsorsPage from '../pages/sponsors.vue'
 import FoodPage from '../pages/food.vue'
 import CraftPage from '../pages/craft.vue'
 import SupportPage from '../pages/support.vue'
-
+import LoungePage from '../pages/lounge.vue'
 
 
 import DynamicRoutePage from '../pages/dynamic-route.vue';
@@ -73,6 +72,10 @@ var routes = [
   {
     path: '/craft/',
     component: CraftPage,
+  },
+  {
+    path: '/lounge/',
+    component: LoungePage,
   },
   {
     path: '/support/',

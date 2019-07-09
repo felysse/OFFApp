@@ -177,8 +177,6 @@
 <script>
   import cordovaApp from '../js/cordova-app.js';
   import routes from '../js/routes.js';
-  import braintree from 'braintree-web';
-  import paypal from 'paypal-checkout';
 
   export default {
     data() {
@@ -415,7 +413,7 @@
     */
 
       this.$f7ready((f7) => {
-
+      alert('hello');
       var app = this.$f7;
       var $$ = this.$$;
       document.addEventListener('backbutton', function navigateBack() {
