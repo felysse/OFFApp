@@ -413,7 +413,6 @@
     */
 
       this.$f7ready((f7) => {
-      alert('hello');
       var app = this.$f7;
       var $$ = this.$$;
       document.addEventListener('backbutton', function navigateBack() {
