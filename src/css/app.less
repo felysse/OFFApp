@@ -43,6 +43,9 @@
   --f7-photobrowser-caption-light-bg-color: #f3f3f3;
   --f7-sheet-border-color: white;
 }
+//var(--f7-sheet-height)
+//
+
 .theme-light{
   --f7-list-bg-color: #faf8f8;
 }
@@ -85,7 +88,14 @@
   background-color: #fff;
   text-color: #fdc35b;
 }
-
+.fixednav{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 6%;
+}
 
 .image{
   display: flex;
@@ -194,8 +204,11 @@
 .swiper-container img {
 width:100%;
 height:100%;
+//bottom: var(--f7-sheet-height);
+//transform: translate(0%, -50%);
 z-index: -1;
 object-fit:cover;
+
 }
 
 .sheet-modal {

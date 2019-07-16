@@ -95,8 +95,10 @@
     <!-- Initial swipe step sheet content -->
     <div class="sheet-modal-swipe-step">
       <div class="margin-top text-align-center">
-        Support Us and <font color="fdc35b"> Swipe Up </font>to<b> Donate Now!</b>
+        Support Us and <font color="fdc35b"> Swipe Up </font>to<b> Donate Now! </b>
+        <f7-link icon-f7="close_round_fill" icon-size="18px" sheet-close style="margin-left:2.2em;"></f7-link>
       </div>
+
       <div class="padding-horizontal padding-bottom"></div>
     </div>
 
@@ -160,10 +162,7 @@
             title: 'Vendors',
             link: '/vendors/'
           },
-          {
-            title: 'KONO Lounge',
-            link: '/lounge/'
-          },
+
           {
             title: 'Performances',
             link: '/schedule/'
@@ -171,6 +170,14 @@
           {
             title: 'Event Map',
             link: '/map/'
+          },
+          {
+            title: 'KONO Lounge',
+            link: '/lounge/'
+          },
+          {
+            title: 'Insta Feed',
+            link: '/feed/'
           },
           {
            title: 'Report An Issue',

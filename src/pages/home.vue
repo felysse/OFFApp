@@ -1,15 +1,21 @@
 <template>
   <f7-page name="home">
     <!-- Top Navbar -->
-    <div class="block">
-        <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" icon-size="28" panel-open="left"></f7-link>
-    </div>
+    <f7-nav-right>
+      <f7-link icon="icon icon-bars"></f7-link>
+    </f7-nav-right>
+  </f7-navbar>
+      <f7-fab-action>
+        <f7-link class ="fixednav" icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" icon-size="28" panel-open="left"></f7-link>
+      </f7-fab-action>
+
 
     <div id="element_block">
         <div id="outer">
             <img id= 'mainimage' src="static/mainlogo.png"></div>
         </div>
     </div>
+
 
     <f7-button id="vendors" href="/Vendors/"><img src="static/vendors.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Vendors</span></f7-button>
     <f7-button id="schedule"class="link" href="/schedule/"><img src="static/schedule.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Performances</span></f7-button>

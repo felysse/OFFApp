@@ -11,6 +11,7 @@
           :media="item.media"
           :link="item.link"
           :title="item.title"
+          :external="item.external"
           :key="index"
       ></f7-list-item>
     </f7-list>
@@ -35,6 +36,13 @@ export default {
           link: '/craft/',
           media: 'palette',
           name: 'mat'
+        },
+        {
+          title: 'Become a Vendor',
+          link: 'https://pinnaclesfestivals.knack.com/oakff#home/',
+          media: 'persons_round_fill',
+          name: 'icon',
+          external: true,
         },
         /*{
           title: 'Entertainment',
