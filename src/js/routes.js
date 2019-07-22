@@ -2,6 +2,7 @@
 import HomePage from '../pages/home.vue';
 import AboutPage from '../pages/about.vue';
 import FormPage from '../pages/form.vue';
+import FeedPage from '../pages/feed.vue';
 import SchedulePage from '../pages/schedule.vue'
 import VendorsPage from '../pages/vendors.vue'
 import MapPage from '../pages/map.vue'
@@ -13,6 +14,9 @@ import FoodPage from '../pages/food.vue'
 import CraftPage from '../pages/craft.vue'
 import SupportPage from '../pages/support.vue'
 import LoungePage from '../pages/lounge.vue'
+import TestPage from '../pages/map1.vue'
+import Test2Page from '../pages/map2.vue'
+
 
 
 import DynamicRoutePage from '../pages/dynamic-route.vue';
@@ -68,15 +72,32 @@ var routes = [
   {
     path: '/food/',
     component: FoodPage,
+    keepAlive: true,
   },
   {
     path: '/craft/',
     component: CraftPage,
+    keepAlive: true,
   },
   {
     path: '/lounge/',
     component: LoungePage,
+    keepAlive: true,
   },
+  {
+    path: '/feed/',
+    component: FeedPage,
+  },
+  {
+    path: '/test/',
+    component: TestPage,
+  },
+  {
+    path: '/test2/',
+    component: Test2Page,
+    keepAlive: true,
+  },
+
   {
     path: '/support/',
     async: function (routeTo, routeFrom, resolve, reject) {
