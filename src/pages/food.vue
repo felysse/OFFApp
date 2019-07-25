@@ -24,18 +24,22 @@
 </f7-page>
 </template>
 <script>
+import { VueOfflineStorage } from 'vue-offline';
 export default{
+    name: 'MyComponent',
     data() {
       return {
         entries: null,
               }
     },
     watch: {
-          currentPage: 'fetchData'
+          currentPage: 'fetchData',
+
       },
 
     created: function () {
       this.fetchData()
+      this.getUserData()
     },
     methods: {
       fetchData: function () {
@@ -47,11 +51,32 @@ export default{
           self.entries = self.entries.feed.entry
           console.log(self.entry)
         }
+        let parsed = JSON.stringify(this.entries);
+        localStorage.setItem('entries', parsed);
         xhr.send()
       },
+      getUserData: function () {
+            if (this.isOnline) {
+                // make network request that returns 'userData' object
+                this.appData = userData
+                VueOfflineStorage.set('user', userData)
+            } else {
+                this.appData = VueOfflineStorage.get('user')
+            }
+        }
   //functions
 
     },
+    mounted() {
+
+     if(localStorage.getItem('entries')) {
+       try {
+         this.entries = JSON.parse(localStorage.getItem('entries'));
+       } catch(e) {
+         localStorage.removeItem('entries');
+       }
+     }
+   },
 }
 </script>
 

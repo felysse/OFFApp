@@ -96,7 +96,7 @@
     <div class="sheet-modal-swipe-step">
       <div class="margin-top text-align-center">
         Support Us and <font color="fdc35b"> Swipe Up </font>to<b> Donate Now! </b>
-        <f7-link icon-f7="close_round_fill" icon-size="18px" sheet-close style="margin-left:2.2em;"></f7-link>
+        <f7-link icon-f7="close_round_fill" icon-size="20px" sheet-close style="margin-left:2.2em;"></f7-link>
       </div>
 
       <div class="padding-horizontal padding-bottom"></div>
@@ -109,9 +109,7 @@
 
 
     </f7-block>
-    <div class="alert alert-danger" v-if="error">
-   {{ error }}
-</div>
+    
     <br>
     </f7-sheet>
 
@@ -147,8 +145,12 @@
 <script>
   import cordovaApp from '../js/cordova-app.js';
   import routes from '../js/routes.js';
+  import { VueOfflineMixin } from 'vue-offline';
+  import { VueOfflineStorage } from 'vue-offline';
+
 
   export default {
+    name: 'MyComponent',
     data() {
 
       return {
@@ -191,6 +193,14 @@
          }, {
            title: 'Sponsors',
            link: '/sponsors/'
+         },
+         {
+           title: 'Test',
+           link: '/test2/'
+         },
+         {
+           title: 'Test2',
+           link: '/test/'
          },
         ],
         /*
@@ -261,6 +271,17 @@
       }
     },
     methods: {
+
+    getUserData () {
+          if (this.isOnline) {
+              // make network request that returns 'userData' object
+              this.appData = userData
+              VueOfflineStorage.set('user', userData)
+          } else {
+              this.appData = VueOfflineStorage.get('user')
+          }
+      },
+
       alertLoginData() {
         this.$f7.dialog.alert('Username: ' + this.username + '<br>Password: ' + this.password);
       },
@@ -283,9 +304,16 @@
         self.toastBottom.open();
       },
     },
-    mounted() {
 
+    mounted() {
       this.$f7ready((f7) => {
+      if (this.isOffline){
+        alert('Please connect to the Internet');
+      }
+      if (this.isOnline){
+        alert('Online!');
+      }
+
       //Handles Android Back Button
       var app = this.$f7;
       var $$ = this.$$;
@@ -321,7 +349,9 @@
           cordovaApp.init(f7);
 
        }
+
       });
+
 
 
     }
