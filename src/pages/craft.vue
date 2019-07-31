@@ -41,7 +41,8 @@ export default{
       fetchData: function () {
         var xhr = new XMLHttpRequest()
         var self = this
-        xhr.open('GET', 'https://spreadsheets.google.com/feeds/list/1rIgn0FB7_PW2tQp2OlCHp1O_PCMAAchWN6rcULQjyEk/1/public/values?alt=json' )
+        //insert own sheet id here
+        xhr.open('GET', 'https://spreadsheets.google.com/feeds/list/<Insert Sheet ID HERE>/1/public/values?alt=json' )
         xhr.onload = function () {
           self.entries = JSON.parse(xhr.responseText)
           self.entries = self.entries.feed.entry

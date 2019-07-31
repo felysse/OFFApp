@@ -41,12 +41,13 @@ export default{
       //this.fetchData()
       //this.getUserData()
     },
-    methods: { //cache data 
+    methods: { //cache data
       fetchData: function () {
         var xhr = new XMLHttpRequest()
         var self = this
           console.log("No cached data, making GET request");
-          xhr.open('GET', 'https://spreadsheets.google.com/feeds/list/1rIgn0FB7_PW2tQp2OlCHp1O_PCMAAchWN6rcULQjyEk/1/public/values?alt=json' );
+          //insert own sheet ID here
+          xhr.open('GET', 'https://spreadsheets.google.com/feeds/list/<Insert sheet ID HERE>/1/public/values?alt=json' );
           //xhr.setRequestHeader('GData-Version','3.0');
           xhr.onload = function () {
           //  console.log(xhr.getResponseHeader("Etag"));
