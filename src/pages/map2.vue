@@ -5,7 +5,7 @@
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
     </f7-navbar>
-    <f7-swiper pagination next-button prev-button :params="{ zoom: true }" class="ks-zoom-slider">
+    <f7-swiper pagination next-button prev-button :params="{ zoom: true, observer: true }" class="ks-zoom-slider">
       <f7-swiper-slide v-for="(entry, index) in entries" zoom :key="index">
         <img :src="entry.gsx$lounge.$t" alt="" />
       </f7-swiper-slide>

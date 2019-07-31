@@ -38,22 +38,26 @@ export default{
       },
 
     created: function () {
-      this.fetchData()
-      this.getUserData()
+      //this.fetchData()
+      //this.getUserData()
     },
-    methods: {
+    methods: { //cache data 
       fetchData: function () {
         var xhr = new XMLHttpRequest()
         var self = this
-        xhr.open('GET', 'https://spreadsheets.google.com/feeds/list/1rIgn0FB7_PW2tQp2OlCHp1O_PCMAAchWN6rcULQjyEk/1/public/values?alt=json' )
-        xhr.onload = function () {
-          self.entries = JSON.parse(xhr.responseText)
-          self.entries = self.entries.feed.entry
-          console.log(self.entry)
-        }
-        let parsed = JSON.stringify(this.entries);
-        localStorage.setItem('entries', parsed);
-        xhr.send()
+          console.log("No cached data, making GET request");
+          xhr.open('GET', 'https://spreadsheets.google.com/feeds/list/1rIgn0FB7_PW2tQp2OlCHp1O_PCMAAchWN6rcULQjyEk/1/public/values?alt=json' );
+          //xhr.setRequestHeader('GData-Version','3.0');
+          xhr.onload = function () {
+          //  console.log(xhr.getResponseHeader("Etag"));
+            self.entries = JSON.parse(xhr.responseText)
+            self.entries = self.entries.feed.entry
+            console.log(self.entry);
+            let parsed = JSON.stringify(this.entries);
+            localStorage.foodEntries = xhr.responseText;
+          }
+          xhr.send()
+
       },
       getUserData: function () {
             if (this.isOnline) {
@@ -63,20 +67,29 @@ export default{
             } else {
                 this.appData = VueOfflineStorage.get('user')
             }
-        }
+          }
   //functions
 
     },
     mounted() {
-
-     if(localStorage.getItem('entries')) {
+     console.log("mounting");
+     //check if foodEntries is defined in our local storage first
+     if(typeof localStorage.foodEntries !== 'undefined') {
        try {
-         this.entries = JSON.parse(localStorage.getItem('entries'));
+         console.log("Parsing cached data");
+         this.entries = JSON.parse(localStorage.foodEntries);
+         this.entries = this.entries.feed.entry
        } catch(e) {
-         localStorage.removeItem('entries');
+         console.log("exception" + e);
+         localStorage.removeItem('foodEntries');
        }
      }
-   },
+     //otherwise, make a GET request for the spreadsheet
+     else {
+          this.fetchData()
+       }
+     },
+
 }
 </script>
 

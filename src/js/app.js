@@ -17,13 +17,21 @@ import '../css/app.less';
 
 // Import App Component
 import App from '../components/app.vue';
+import Blog from '../pages/map1.vue';
 
 import Framework7Icons from 'framework7-icons/css/framework7-icons.css'
 
 import Routes from './routes.js'
+import VueInstagram from 'vue-instagram'
+import VueOffline from 'vue-offline'
+
+
 
 // Init Framework7-Vue Plugin
 Framework7.use(Framework7Vue);
+Vue.use(VueInstagram);
+Vue.use(VueOffline);
+
 
 
 // Init App

@@ -72,7 +72,6 @@ var routes = [
   {
     path: '/food/',
     component: FoodPage,
-    keepAlive: true,
   },
   {
     path: '/craft/',

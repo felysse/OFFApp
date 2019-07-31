@@ -109,7 +109,7 @@
 
 
     </f7-block>
-    
+
     <br>
     </f7-sheet>
 
@@ -178,10 +178,6 @@
             link: '/lounge/'
           },
           {
-            title: 'Insta Feed',
-            link: '/feed/'
-          },
-          {
            title: 'Report An Issue',
            link: '/report/'
          }, {
@@ -194,14 +190,7 @@
            title: 'Sponsors',
            link: '/sponsors/'
          },
-         {
-           title: 'Test',
-           link: '/test2/'
-         },
-         {
-           title: 'Test2',
-           link: '/test/'
-         },
+
         ],
         /*
         photosMap: [
@@ -272,16 +261,6 @@
     },
     methods: {
 
-    getUserData () {
-          if (this.isOnline) {
-              // make network request that returns 'userData' object
-              this.appData = userData
-              VueOfflineStorage.set('user', userData)
-          } else {
-              this.appData = VueOfflineStorage.get('user')
-          }
-      },
-
       alertLoginData() {
         this.$f7.dialog.alert('Username: ' + this.username + '<br>Password: ' + this.password);
       },
@@ -291,6 +270,24 @@
       onSchedulePage: function () {
         this.$refs.pageSchedule.open()
       },
+      checkOnline: function() {
+        // Handle IE and more capable browsers
+
+        var xhr = new ( window.ActiveXObject || XMLHttpRequest )( "Microsoft.XMLHTTP" );
+
+  // Open new request as a HEAD to the root hostname with a random param to bust the cache
+        xhr.open( "HEAD", "//" + window.location.hostname + "/?rand=" + Math.floor((1 + Math.random()) * 0x10000), false );
+        alert(window.location.hostname);
+  // Issue request and handle response
+        try {
+          alert('false');
+          xhr.send();
+          return ( xhr.status >= 200 && (xhr.status < 300 || xhr.status === 304) );
+        } catch (e) {
+          return false;
+        }
+      },
+
       showToastBottom() {
         const self = this;
         // Create toast
@@ -307,12 +304,15 @@
 
     mounted() {
       this.$f7ready((f7) => {
-      if (this.isOffline){
-        alert('Please connect to the Internet');
-      }
-      if (this.isOnline){
+      console.log("Online/Offline Status:");
+      console.log(this.isOffline);
+      console.log(this.isOnline);
+      /*if (this.checkOnline()){
         alert('Online!');
       }
+      else {
+        alert('Offline!')
+      }*/
 
       //Handles Android Back Button
       var app = this.$f7;

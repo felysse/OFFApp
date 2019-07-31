@@ -16,10 +16,15 @@
         </div>
     </div>
 
+    <vue-status>
+    <h2 slot="online">You are online (Any online content can be put here)</h2>
+    <h2 slot="offline">You are offline (Any Offline content can be put here)</h2>
+    </vue-status>
 
-    <f7-button id="vendors" href="/Vendors/"><img src="static/vendors.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Vendors</span></f7-button>
-    <f7-button id="schedule"class="link" href="/schedule/"><img src="static/schedule.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Performances</span></f7-button>
-    <f7-button id="map"class="link" href="/map/"><img src="static/mapbutton.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Map</span></f7-button>
+
+    <f7-button id="vendors" href="/Vendors/" sheet-open=".demo-sheet-swipe-to-step"><img src="static/vendors.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Vendors</span></f7-button>
+    <f7-button id="schedule"class="link" href="/schedule/" sheet-open=".demo-sheet-swipe-to-step"><img src="static/schedule.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Performances</span></f7-button>
+    <f7-button id="map"class="link" href="/map/" sheet-open=".demo-sheet-swipe-to-step"><img src="static/mapbutton.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Map</span></f7-button>
 
     <!--<f7-swiper pagination :params="{ loop: true, loopedSlides: items, speed:500, slidesPerView: 1, spaceBetween: 20, autoplay: { delay: 5000, disableOnInteraction:false }}">
     <f7-swiper-slide><img src="static/HomeSlides/slide1.jpg"></f7-swiper-slide>
@@ -33,6 +38,34 @@
     <f7-swiper-slide><img src="static/HomeSlides/slide6.jpg"></f7-swiper-slide>
     </f7-swiper>-->
 
+    <f7-sheet
+      class="demo-sheet-swipe-to-step"
+      style="height:auto; --f7-sheet-bg-color: #fff;"
+      swipe-to-close
+      swipe-to-step
+      :backdrop="false"
+      :closeByOutsideClick="true"
+    >
+      <!-- Initial swipe step sheet content -->
+      <div class="sheet-modal-swipe-step">
+        <div class="margin-top text-align-center">
+          Support Us and <font color="fdc35b"> Swipe Up </font>to<b> Donate Now! </b>
+          <f7-link icon-f7="close_round_fill" icon-size="20px" sheet-close style="margin-left:2.2em;"></f7-link>
+        </div>
+
+        <div class="padding-horizontal padding-bottom"></div>
+      </div>
+
+      <!-- Rest of the sheet content that will opened with swipe -->
+      <f7-block>
+
+                    <f7-button fill href="https://secure.squarespace.com/checkout/donate?donatePageId=5a8c9d92085229336036f459&ss_cid=e702a449-31b0-403d-a6c6-28ae11b45a66&ss_cvisit=1562175421959&ss_cvr=c0b21430-e79b-4aa6-8cd6-1ffce4f129f4%7C1554711350733%7C1560970771181%7C1562175423460%7C24" class="external" target="_blank">Donate</f7-button>
+
+
+      </f7-block>
+
+      <br>
+      </f7-sheet>
 
 
 
@@ -41,6 +74,7 @@
 
 <script>
   import { f7Navbar, f7Page, f7Popup, f7BlockTitle, f7Block, f7NavRight, f7Link, f7Button } from 'framework7-vue';
+  import VueStatus from 'vue-status'
   export default {
     components: {
       f7Navbar,
@@ -51,6 +85,7 @@
       f7NavRight,
       f7Link,
       f7Button,
+      VueStatus,
     },
     data() {
       return {
