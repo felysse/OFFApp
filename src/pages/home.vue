@@ -16,11 +16,6 @@
         </div>
     </div>
 
-    <vue-status>
-    <h2 slot="online">You are online (Any online content can be put here)</h2>
-    <h2 slot="offline">You are offline (Any Offline content can be put here)</h2>
-    </vue-status>
-
 
     <f7-button id="vendors" href="/Vendors/" sheet-open=".demo-sheet-swipe-to-step"><img src="static/vendors.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Vendors</span></f7-button>
     <f7-button id="schedule"class="link" href="/schedule/" sheet-open=".demo-sheet-swipe-to-step"><img src="static/schedule.jpg" style="position:absolute; z-index: -1; height: 100%; width: 100%; object-fit: cover;"><span style = "background-color:#000">Performances</span></f7-button>
